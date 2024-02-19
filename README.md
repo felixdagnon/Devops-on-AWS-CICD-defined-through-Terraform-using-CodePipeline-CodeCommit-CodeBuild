@@ -45,4 +45,21 @@ AWS cli or through terraform code.
 
 Let focus on CI/CD components from the diagram above.
 
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/021157b0-7bd9-418f-aaee-891be1196b0a)
+
+ AWS provides solutions for all of my needs:
+
+- AWS CodeCommit acts as a git server, providing repositories to store code and allows interaction with your code through the git cli;
+
+- AWS CodeBuild acts as a Build environment/engine and is used to execute instructions in multiple stages, to build and pack code in the
+
+shape of a usable artifact;
+
+- AWS CodePipeline is the CI/CD framework that links the other two services together (as well as others) through executable Stages;
+
+- AWS S3 to keep any artifacts that result out of a successful Build Stage, for later use and posterity.
+
+  
+
+
 
