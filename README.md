@@ -516,6 +516,9 @@ phases:
 Create demo-repo 
 
 ### Step-11-02: Clone Remote Repo and Copy all related files 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/77832046-bfb9-42a3-b9a4-debcedeb18c7)
+
 ```t
 # Change Directory
 cd demo-repo
@@ -529,7 +532,7 @@ git clone https://github.com/stacksimplify/terraform-iacdevops-with-aws-codepipe
 3. Destination Folder Path: demo-repos/terraform-iacdevops-with-aws-codepipeline
 
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/77832046-bfb9-42a3-b9a4-debcedeb18c7)
+
 
 
 # Verify Git Status
