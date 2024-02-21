@@ -22,6 +22,8 @@ and pushed to the code repository;
 - the code translates into infrastructure which will be built by running terraform commands.
 
 - The environment that is being built will be used to vend Accounts in AWS from a Management account that relies
+
+  We should use this option to implemente pipeline
   
  on AWS SSO to allow user access. Users assume Roles (shaped as Permission Sets) assigned to Groups that they are
  
@@ -57,6 +59,36 @@ shape of a usable artifact;
 - AWS CodePipeline is the CI/CD framework that links the other two services together (as well as others) through executable Stages;
 
 - AWS S3 to keep any artifacts that result out of a successful Build Stage, for later use and posterity.
+
+
+
+
+
+## Step-01: Copy terraform-manifests from Section-15
+- Copy `terraform-manifests` from Section-15 `15-Autoscaling-with-Launch-Templates`
+- Update `private-key\terraform-key.pem` with your private key with same name.
+
+
+## Step-02: c1-versions.tf - Terraform Backends
+### Step-02-01 Add backend block as below 
+```t
+  # Adding Backend as S3 for Remote State Storage
+  backend "s3" { }  
+```
+### Step-02-02: Create file named `dev.conf`
+```t
+bucket = "terraform-on-aws-for-ec2"
+key    = "iacdevops/dev/terraform.tfstate"
+region = "us-east-1" 
+dynamodb_table = "iacdevops-dev-tfstate" 
+```
+### Step-02-03: Create file named `stag.conf`
+```t
+bucket = "terraform-on-aws-for-ec2"
+key    = "iacdevops/stag/terraform.tfstate"
+region = "us-east-1" 
+dynamodb_table = "iacdevops-stag-tfstate" 
+```
 
 
 
@@ -129,12 +161,57 @@ organization level standards.
 
 
 
-
 ## Step-03-02: Option-2: Create only 1 folder and leverage same C1 to C13 files (approx 30 files) across environments.
 
 Only 30 files to manage across Dev, QA, Staging, Production and DR environments.
 
-We are going to take this option-2 and build the pipeline for Dev and Staging environments
+- We are going to take this `option-2` and build the pipeline for Dev and Staging environments 
+
+## Step-04: Merge vpc.auto.tfvars and ec2instance.auto.tfvars 
+- Merge `vpc.auto.tfvars` and `ec2instance.auto.tfvars` to environment specific `.tfvars` example `dev.tfvars` and `stag.tfvats`
+- Also don't provide `.auto.` in `dev.tfvars` or `stag.tfvars` if we want to leverage same TF Config files across environmets.
+- We are going to pass the `.tfvars` file as `-var-file` argument to `terraform apply` command
+```t
+terraform apply -input=false -var-file=dev.tfvars -auto-approve  
+```
+
+
+### Step-04-01: dev.tfvars
+```t
+# Environment
+environment = "dev"
+# VPC Variables
+vpc_name = "myvpc"
+vpc_cidr_block = "10.0.0.0/16"
+vpc_availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
+vpc_public_subnets = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
+vpc_private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+vpc_database_subnets= ["10.0.151.0/24", "10.0.152.0/24", "10.0.153.0/24"]
+vpc_create_database_subnet_group = true 
+vpc_create_database_subnet_route_table = true   
+vpc_enable_nat_gateway = true  
+vpc_single_nat_gateway = true
+
+# EC2 Instance Variables
+instance_type = "t3.micro"
+instance_keypair = "terraform-key"
+private_instance_count = 2
+```
+### Step-04-01: stag.tfvars
+```t
+# Environment
+environment = "stag"
+# VPC Variables
+vpc_name = "myvpc"
+vpc_cidr_block = "10.0.0.0/16"
+vpc_availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
+vpc_public_subnets = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
+vpc_private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+vpc_database_subnets= ["10.0.151.0/24", "10.0.152.0/24", "10.0.153.0/24"]
+vpc_create_database_subnet_group = true 
+vpc_create_database_subnet_route_table = true   
+vpc_enable_nat_gateway = true  
+vpc_single_nat_gateway = true
 
 
 
