@@ -59,6 +59,59 @@ shape of a usable artifact;
 
 - AWS S3 to keep any artifacts that result out of a successful Build Stage, for later use and posterity.
 
+
+
+## Step-02-04: Create S3 Bucket related folders for both environments for Terraform State Storage
+
+Go to Services -> S3 -> terraform-on-aws-for-ec2-demo1
+
+- Create Folder iacdevops
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/48b36658-2770-44e7-a5d1-08bb0eaa9ccd)
+
+
+- Create Folder iacdevops\dev
+
+- Create Folder iacdevops\stag
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/dcbaee96-96ee-4fb9-9195-cbfc8fb19cd7)
+
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/48b36658-2770-44e7-a5d1-08bb0eaa9ccd)
+
+
+## Step-02-05: Create DynamoDB Tables for Both Environments for Terraform State Locking
+
+- Create Dynamo DB Table for Dev Environment
+  
+- Table Name: iacdevops-dev-tfstate
+
+- Partition key (Primary Key): LockID (Type as String)
+  
+- Table settings: Use default settings (checked)
+
+- Click on Create
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/482d4ecb-b7d2-4a3c-87e5-79ab125ac2eb)
+
+  
+## Create Dynamo DB Table for Staging Environment
+
+- Table Name: iacdevops-stag-tfstate
+
+- Partition key (Primary Key): LockID (Type as String)
+
+- Table settings: Use default settings (checked)
+
+- Click on Create
+
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/aeae8abd-0d99-4dee-8975-e316bba67430)
+
+
+
+
+
   
 
 
