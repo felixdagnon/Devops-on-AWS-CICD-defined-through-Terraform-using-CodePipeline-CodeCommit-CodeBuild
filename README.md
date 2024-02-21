@@ -2,7 +2,6 @@
 Devops on AWS CI/CD defined through Terraform using CodePipeline, CodeCommit CodeBuild
 
 
-
 Before delving into details, let’s first take a look at the picture.
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0c28eda5-ec5a-4642-afda-59561d69e894)
@@ -77,9 +76,6 @@ Go to Services -> S3 -> terraform-on-aws-for-ec2-demo1
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/dcbaee96-96ee-4fb9-9195-cbfc8fb19cd7)
 
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/48b36658-2770-44e7-a5d1-08bb0eaa9ccd)
-
-
 ## Step-02-05: Create DynamoDB Tables for Both Environments for Terraform State Locking
 
 - Create Dynamo DB Table for Dev Environment
@@ -105,9 +101,40 @@ Go to Services -> S3 -> terraform-on-aws-for-ec2-demo1
 
 - Click on Create
 
-
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/aeae8abd-0d99-4dee-8975-e316bba67430)
 
+## Step-03: Pipeline Build Out - Decisions
+
+We have two options here.
+
+Step-03-01: Option-1: Create separate folders per environment and have same TF Config files (c1 to c13) maintained per environment
+
+More work as we need to manage many environment related configs
+
+- Dev - C1 to C13 - Approximate 30 files
+
+- QA - C1 to C13 - Approximate 30 files
+
+- Stg - C1 to C13 - Approximate 30 files
+
+- Prd - C1 to C13 - Approximate 30 files
+
+- DR - C1 to C13 - Approximate 30 files
+
+- Close to 150 files you need to manage changes.
+  
+For critical projects which you want to isolate as above, Terraform also recommends this approach but its all case to case basis on the environment we have built, skill level and 
+
+organization level standards.
+
+
+
+
+## Step-03-02: Option-2: Create only 1 folder and leverage same C1 to C13 files (approx 30 files) across environments.
+
+Only 30 files to manage across Dev, QA, Staging, Production and DR environments.
+
+We are going to take this option-2 and build the pipeline for Dev and Staging environments
 
 
 
