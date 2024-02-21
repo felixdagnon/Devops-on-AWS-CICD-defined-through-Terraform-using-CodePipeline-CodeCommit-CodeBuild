@@ -630,44 +630,115 @@ Let's check Github
 - Encryption Key: Default AWS Managed Key
 
 - Click **Next**
+  
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9c07353a-d2e1-4c69-8813-d9dad53b5710)
 
-   
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/244c9f6a-f1f8-45b0-b4a1-0541473629b3)
+
+
 ### Source Stage
+
 - **Source Provider:** Github (Version 2)
+  
 - **Connection:** terraform-iacdevops-aws-cp-con1
+  
 - **Repository name:** terraform-iacdevops-with-aws-codepipeline
+  
 - **Branch name:** main
+  
 - **Change detection options:** leave to defaults as checked
+  
 - **Output artifact format:** leave to defaults as `CodePipeline default`
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/06e54c7b-7072-476d-8d86-823050004550)
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c603c3bf-466b-4e50-90ff-60055ee7fcfb)
+
+
 ### Add Build Stage
+
 - **Build Provider:** AWS CodeBuild
+  
 - **Region:** N.Virginia
+  
 - **Project Name:** Click on **Create Project**
+
+  ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/a9910d1c-9d8d-434c-834e-089cb2bcdd72)
+
+  
   - **Project Name:** codebuild-tf-iacdevops-aws-cp1
+    
   - **Description:** CodeBuild Project for Dev Stage of IAC DevOps Terraform Demo
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f5125cfd-75a2-4654-82ca-28d1ec40e23e)
+
+
   - **Environment image:** Managed Image
+    
   - **Operating System:** Amazon Linux 2
+    
   - **Runtimes:** Standard
+
+    ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f4e154b7-76f4-4c9c-9ae3-9ec9e1c258ed)
+
   - **Image:** latest available today (aws/codebuild/amazonlinux2-x86_64-standard:3.0)
+    
   - **Environment Type:** Linux
+    
   - **Service Role:** New (leave to defaults including Role Name)
+
+    ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/4a78741b-351b-4628-bb28-636799f07c58)
+
   - **Build specifications:** use a buildspec file
+    
   - **Buildspec name - optional:** buildspec-dev.yml  (Ensure that this file is present in root folder of your github repository)
+
+    ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/a0cefac3-7b69-49f3-b7e3-58e44ddd943d)
+
+    
   - Rest all leave to defaults
+    
   - Click on **Continue to CodePipeline**
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/3c04a341-589b-47ce-8494-b501f738e7a9)
+
+    
 - **Project Name:** This value should be auto-populated with `codebuild-tf-iacdevops-aws-cp1`
+  
 - **Build Type:** Single Build
+  
 - Click **Next**
+
+  ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0a7af328-61bd-4653-a152-fe086eb7449a)
+
+  
+
 ### Add Deploy Stage
+
 - Click on **Skip Deploy Stage**
+
+ ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9ed6745a-eddf-424c-b9d3-afa02b33d51e)
+
+  
 ### Review Stage
+
 - Click on **Create Pipeline**
+  
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/7749583f-6a3b-41fe-bdec-32fa56ba746b)
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/dac3b543-fcac-4494-9fdf-f581a86237ea)
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e50afffd-f073-46b7-8338-4ab6df779521)
 
 
 ## Step-15: Verify the Pipeline created
+
 - **Verify Source Stage:** Should pass
-- **Verify Build Stage:** should fail with error 
+  
+- **Verify Build Stage:** should fail with error
+  
 - Verify Build Stage logs by clicking on **details** in pipeline screen
+  
 ```log
 [Container] 2021/05/11 06:24:06 Waiting for agent ping
 [Container] 2021/05/11 06:24:09 Waiting for DOWNLOAD_SOURCE
