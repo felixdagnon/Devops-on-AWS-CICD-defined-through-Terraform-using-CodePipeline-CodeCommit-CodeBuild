@@ -545,35 +545,93 @@ git push
 https://github.com/stacksimplify/terraform-iacdevops-with-aws-codepipeline.git
 ```
 
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/91532e08-0387-4309-b9a8-f8f5ea73f0a6)
+
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/21dd41ae-d2a2-4af6-b14e-1a52494bc530)
+
+
+Let's check Github
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/28c4c56f-3e5b-4b97-9f32-113439095509)
+
+
+
 ## Step-12: Verify if AWS Connector for GitHub already installed on your Github
+
 - Go to below url and verify
+  
 - **URL:** https://github.com/settings/installations
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/afd29ee8-d36b-43ee-8331-bc9112f99b54)
+
+
 
 ## Step-13: Create Github Connection from AWS Developer Tools
+
 - Go to Services -> CodePipeline -> Create Pipeline
+  
 - In Developer Tools -> Click on **Settings** -> Connections -> Create Connection
+  
 - **Select Provider:** Github
+  
 - **Connection Name:** terraform-iacdevops-aws-cp-con1
+  
 - Click on **Connect to Github**
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/8184272d-1260-42d8-92b2-8ebeddd671f8)
+  
 - GitHub Apps: Click on **Install new app**
+  
 - It should redirect to github page `Install AWS Connector for GitHub`
+  
 - **Only select repositories:** terraform-iacdevops-with-aws-codepipeline
-- Click on **Install**
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/1463cec5-bdfa-46d1-9059-641117250290)
+
+
+- Click on **save**
+
+  Redirect to AWS console
+  
 - Click on **Connect**
+
+  ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/ba3d4192-4b37-4f43-862b-9e96c95f9efa)
+
 - Verify Connection Status: It should be in **Available** state
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/838b3e46-5aec-4032-999f-9dcb3c54ba10)
+
+
+  
 - Go to below url and verify
+  
 - **URL:** https://github.com/settings/installations
+
 - You should see `Install AWS Connector for GitHub` app installed
 
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/adcb582b-3490-4da0-9809-008e8ae8d41f)
+
+
 ## Step-14: Create AWS CodePipeline
+
 - Go to Services -> CodePipeline -> Create Pipeline
+  
 ### Pipeline settings
+
 - **Pipeline Name:** tf-iacdevops-aws-cp1
+  
 - **Service role:** New Service Role
+
 - rest all defaults
-  - Artifact store: Default Location
-  - Encryption Key: Default AWS Managed Key
-- Click **Next**   
+
+- Artifact store: Default Location
+    
+- Encryption Key: Default AWS Managed Key
+
+- Click **Next**
+
+   
 ### Source Stage
 - **Source Provider:** Github (Version 2)
 - **Connection:** terraform-iacdevops-aws-cp-con1
