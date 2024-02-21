@@ -165,7 +165,11 @@ organization level standards.
 
 Only 30 files to manage across Dev, QA, Staging, Production and DR environments.
 
-- We are going to take this `option-2` and build the pipeline for Dev and Staging environments 
+- We are going to take this `option-2` and build the pipeline for Dev and Staging environments
+  
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f365ca05-b8c0-4c4f-9e5d-dc99806b24bb)
+
 
 ## Step-04: Merge vpc.auto.tfvars and ec2instance.auto.tfvars 
 - Merge `vpc.auto.tfvars` and `ec2instance.auto.tfvars` to environment specific `.tfvars` example `dev.tfvars` and `stag.tfvats`
@@ -214,6 +218,22 @@ vpc_enable_nat_gateway = true
 vpc_single_nat_gateway = true
 
 
+# EC2 Instance Variables
+instance_type = "t3.micro"
+instance_keypair = "terraform-key"
+private_instance_count = 2
+```
+- Remove / Delete the following two files
+  - vpc.auto.tfvars
+  - ec2instance.auto.tfvars
+
+## Step-05: terraform.tfvars
+- `terraform.tfvars` which autoloads for all environment creations will have only generic variables. 
+```t
+# Generic Variables
+aws_region = "us-east-1"
+business_divsion = "hr"
+```
 
 
 
