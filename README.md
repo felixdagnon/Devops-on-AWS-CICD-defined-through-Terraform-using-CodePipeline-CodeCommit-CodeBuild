@@ -531,12 +531,9 @@ git clone https://github.com/stacksimplify/terraform-iacdevops-with-aws-codepipe
 2. Copy all files from Source Folder to Destination Folder
 3. Destination Folder Path: demo-repos/terraform-iacdevops-with-aws-codepipeline
 
-
-
-
-
 # Verify Git Status
 git status
+
 
 # Git Commit
 git commit -am "First Commit"
