@@ -727,7 +727,7 @@ Let's check Github
 
 - Click on **Create Pipeline**
   
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/7749583f-6a3b-41fe-bdec-32fa56ba746b)
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/882482aa-793b-4bc1-bcda-ec65a0e65c8e)
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/dac3b543-fcac-4494-9fdf-f581a86237ea)
 
@@ -737,8 +737,14 @@ Let's check Github
 ## Step-15: Verify the Pipeline created
 
 - **Verify Source Stage:** Should pass
-  
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/b623b5f5-0fac-4b40-8d61-80ae4b2bf9a8)
+
+
 - **Verify Build Stage:** should fail with error
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/cf66d0a6-66c4-4eaf-a4fb-d3078487a41f)
+ 
   
 - Verify Build Stage logs by clicking on **details** in pipeline screen
   
