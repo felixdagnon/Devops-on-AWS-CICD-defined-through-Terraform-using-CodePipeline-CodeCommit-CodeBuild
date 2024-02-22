@@ -631,9 +631,12 @@ Let's check Github
 
 - Click **Next**
   
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9c07353a-d2e1-4c69-8813-d9dad53b5710)
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/244c9f6a-f1f8-45b0-b4a1-0541473629b3)
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/968017b1-a84f-4a8a-a2b3-dff3be74d2b2)
+
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/3ef0af67-8316-4350-9389-5731518db0a2)
 
 
 ### Source Stage
