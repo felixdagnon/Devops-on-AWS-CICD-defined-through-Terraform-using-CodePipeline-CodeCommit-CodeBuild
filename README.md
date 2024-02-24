@@ -759,37 +759,84 @@ Let's check Github
 [Container] 2021/05/11 06:24:09 Phase complete: DOWNLOAD_SOURCE State: FAILED
 [Container] 2021/05/11 06:24:09 Phase context status code: Decrypted Variables Error Message: AccessDeniedException: User: arn:aws:sts::180789647333:assumed-role/codebuild-codebuild-tf-iacdevops-aws-cp1-service-role/AWSCodeBuild-97595edc-1db1-4070-97a0-71fa862f0993 is not authorized to perform: ssm:GetParameters on resource: arn:aws:ssm:us-east-1:180789647333:parameter/CodeBuild/MY_AWS_ACCESS_KEY_ID
 ```
+
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c67c9033-33d9-44e3-85c0-161538bc712b)
+
 ## Step-16: Fix ssm:GetParameters IAM Role issues
+
 ### Step-16-01: Get IAM Service Role used by CodeBuild Project
+
 - Get the IAM Service Role name CodeBuild Project is using
+  
 - Go to CodeBuild -> codebuild-tf-iacdevops-aws-cp1 -> Edit -> Environment
+  
 - Make a note of Service Role ARN
+
+Here "codebuild-codebuild-tf-iacdevops-aws-cp1-service-role"
+   
 ```t
 # CodeBuild Service Role ARN 
 arn:aws:iam::180789647333:role/service-role/codebuild-codebuild-tf-iacdevops-aws-cp1-service-role
 ```
+
+
 ### Step-16-02: Create IAM Policy with Systems Manager Get Parameter Read Permission
+
 - Go to Services -> IAM -> Policies -> Create Policy
+  
 - **Service:** Systems Manager
+
 - **Actions:** Get Parameters (Under Read)
+
 - **Resources:** All
+
 - Click **Next Tags**
+
 - Click **Next Review**
+  
 - **Policy name:** systems-manger-get-parameter-access
+  
 - **Policy Description:** Read Parameters from Parameter Store in AWS Systems Manager Service
+  
 - Click on **Create Policy**
 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/294b22f4-5230-462e-8a3d-157eadefd1b7)
+
+
 ### Step-16-03: Associate this Policy to IAM Role
+
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/13d64ded-b0ca-4c82-9133-46d0a25d9ab5)
+
+
 - Go to Services -> IAM -> Roles -> Search for `codebuild-codebuild-tf-iacdevops-aws-cp1-service-role`
+  
 - Attach the polic named `systems-manger-get-parameter-access`
 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f3f9d304-7a4e-4e1d-bc49-0005ae328eda)
+
+
 ## Step-17: Re-run the CodePipeline 
+
 - Go to Services -> CodePipeline -> tf-iacdevops-aws-cp1
+  
 - Click on **Release Change**
-- **Verify Source Stage:** 
+
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e9540763-2399-445f-930d-043494dee424)
+
+  
+- **Verify Source Stage:**
+  
   - Should pass
-- **Verify Build Stage:** 
+    
+- **Verify Build Stage:**
+  
   - Verify Build Stage logs by clicking on **details** in pipeline screen
+    
   - Verify `Cloudwatch -> Log Groups` logs too (Logs saved in CloudWatch for additional reference)
 
 
