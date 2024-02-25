@@ -709,7 +709,8 @@ Let's check Github
 - **Project Name:** This value should be auto-populated with `codebuild-tf-iacdevops-aws-cp1`
   
 - **Build Type:** Single Build
-  
+
+
 - Click **Next**
 
   ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0a7af328-61bd-4653-a152-fe086eb7449a)
