@@ -913,27 +913,20 @@ All ressources are completed in Dev
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 0. Confirm SNS Subscription in your email
+
 1. Verify EC2 Instances
+
 2. Verify Launch Templates (High Level)
+
 3. Verify Autoscaling Group (High Level)
+
 4. Verify Load Balancer
+
 5. Verify Load Balancer Target Group - Health Checks
+
 7. Access and Test
+
 ```t
 # Access and Test
 http://devdemo5.kalyandemo.com
