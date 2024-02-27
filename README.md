@@ -894,13 +894,17 @@ Running command terraform validate, terraform plan, terraform apply
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/4739473c-c60d-4453-a336-e06d98a2f623)
 
-terraform apply completed 
+terraform plan completed 
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/fbe6af95-19a8-43c8-b016-e9b4eb622017)
 
-All ressources are completed in Dev
+terraform apply completed 
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/56c48dcf-179c-470f-b393-e329b28d5660)
+
+All ressources are completed in Dev
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/3d5c94aa-dd1b-477f-b449-b582fc610825)
 
 
 
