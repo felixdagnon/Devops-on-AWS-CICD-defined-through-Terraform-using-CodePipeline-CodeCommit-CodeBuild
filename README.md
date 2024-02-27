@@ -890,12 +890,21 @@ Successfully configured the backend "s3"! Terraform will automatically use this 
 
 Terraform has been successfully initialized. 
 
+Running command terraform validate, terraform plan, terraform apply
+
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/4739473c-c60d-4453-a336-e06d98a2f623)
 
+terraform apply completed 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/fbe6af95-19a8-43c8-b016-e9b4eb622017)
+
+All ressources are completed in Dev
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/56c48dcf-179c-470f-b393-e329b28d5660)
 
 
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/61ef69b7-b4ae-4ed3-9dff-c24537b1ae52)
+
 
 
 
