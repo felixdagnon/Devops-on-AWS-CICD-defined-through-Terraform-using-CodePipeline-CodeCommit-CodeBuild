@@ -1,7 +1,6 @@
 # Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild
 Devops on AWS CI/CD defined through Terraform using CodePipeline, CodeCommit CodeBuild
 
-
 Before delving into details, let’s first take a look at the picture.
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0c28eda5-ec5a-4642-afda-59561d69e894)
