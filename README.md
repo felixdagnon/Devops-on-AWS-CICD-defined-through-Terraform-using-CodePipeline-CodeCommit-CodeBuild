@@ -959,6 +959,38 @@ http://devdemo5.kalyandemo.com/app1/index.html
 http://devdemo5.kalyandemo.com/app1/metadata.html
 ```
 
+### Access and Test "http://devdemo5.kalyandemo.com"
+
+Let's first verify Route 53. The record name "devdemo5.kalyandemo.com" created
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/7051c2c8-e246-40b2-8bcd-e7a07f6108e2)
+
+Copy this link "devdemo5.kalyandemo.com" and paste url
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/a4e1d216-4541-4ffd-9110-672a5ce4c63a)
+
+We obtain https connexion secure
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e777edae-bb96-4b48-997f-1fbf30fcc3f7)
+
+Click on to view the certificate complete information
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/50e7a6c5-eb19-4850-aeb2-6448a7339f2c)
+
+
+### Access and Test "http://devdemo5.kalyandemo.com/app1/index.html"
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/dbd1567e-f953-4c69-8085-1da61e61c9da)
+
+
+
+
+
+
+
+
+
+
 ## Step-19: Add Approval Stage before deploying to staging environment
 - Go to Services -> AWS CodePipeline -> tf-iacdevops-aws-cp1 -> Edit
 ### Add Stage
