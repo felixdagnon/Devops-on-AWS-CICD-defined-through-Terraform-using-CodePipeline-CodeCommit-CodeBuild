@@ -880,12 +880,20 @@ Intall and pre build phases completed
 
 Initializing the backend...
 
-Successfully configured the backend "s3"! Terraform will automatically use this backend. " terraform.tfstate" is created
+Successfully configured the backend "s3"! Terraform will automatically use this backend.
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e3547498-8608-4946-9638-1d1349d72d41)
 
+ " terraform.tfstate" is created is S3
 
-Terraform has been successfully initialized
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/55b6f0f9-da31-4867-9459-d043d70eab27)
+
+Terraform has been successfully initialized. 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/4739473c-c60d-4453-a336-e06d98a2f623)
+
+
+
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/61ef69b7-b4ae-4ed3-9dff-c24537b1ae52)
 
