@@ -870,7 +870,9 @@ CodeBuild creatted underline ressourrces for VPC. Let's verify codebuild log
 
 The entire ressources are completed
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/41ef09f8-f5cb-447e-a532-1f9b4657fd71)
+Download phase complete
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/3a6abd0f-3908-4001-8a2c-88c253ec55d4)
 
 Initializing the backend...
 
