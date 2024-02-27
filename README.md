@@ -993,7 +993,9 @@ The first availably zone
 
 The second availably zone
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/99e05713-a763-44c1-a1aa-3fc6c1a2dac2)
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d7d8b6e7-e284-4cea-99e4-8a704e6572ab)
+
+
 
 
 
