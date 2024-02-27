@@ -907,23 +907,48 @@ All ressources are completed in Dev
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/3d5c94aa-dd1b-477f-b449-b582fc610825)
 
 
-
-
-
-
-
-
 0. Confirm SNS Subscription in your email
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/b96ba149-4717-495a-a2f5-8d1240505560)
+
 
 1. Verify EC2 Instances
 
+"dev-BastionHost" and  and 2 instances "hr-dev" are created and running
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e2abc441-ef35-4878-8509-90c63247381b)
+
 2. Verify Launch Templates (High Level)
+
+It's created the lunch template name "hr-dev-2024022709342795200000000b" because we added "prefix"+local.name
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/24ad5629-d220-4909-b968-24d2874a7fd9)
 
 3. Verify Autoscaling Group (High Level)
 
+It's created the Autoscaling Group name "hr-dev-2024022709342795200000000b" because we added "prefix"+local.name
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/05ec8f91-36f9-4afd-a293-f737405a0127)
+
+let's verify Target tracking policy
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/bef41afc-d4d2-4729-bdec-6626ec6eff8c)
+
 4. Verify Load Balancer
 
+Load Balancer name "hr-dev" created with listeners
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/8f09cbdb-7f42-4dbb-8097-75c908709be4)
+
+Let check check certificate created
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0021079b-af5b-481c-a117-60d4c73f2848)
+
 5. Verify Load Balancer Target Group - Health Checks
+
+Target groups are Healthy because the instance running in availabities zones are Healthy.
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f8648b27-aca0-433e-b0bc-bfd87735d6f3)
 
 7. Access and Test
 
