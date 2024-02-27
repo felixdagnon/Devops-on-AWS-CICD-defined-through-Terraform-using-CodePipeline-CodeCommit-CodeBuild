@@ -845,11 +845,58 @@ arn:aws:iam::180789647333:role/service-role/codebuild-codebuild-tf-iacdevops-aws
 - **Verify Build Stage:**
   
   - Verify Build Stage logs by clicking on **details** in pipeline screen
-    
+
+ ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/84f17894-ab88-4392-9abb-0b1122903fe6)
+
   - Verify `Cloudwatch -> Log Groups` logs too (Logs saved in CloudWatch for additional reference)
 
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/36b99d1f-cc7d-4c91-80f7-a4b0dbde98a7)
+
+Let's check log event. It shows build and post build state succeeded
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/beb57b16-d44d-46c7-bdf3-265525db8e80)
 
 ## Step-18: Verify Resources
+
+Let's verify ressoures 
+
+### VPC is created and inside all ressources
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/2d355af8-5243-46ce-8a76-c51be9c5a286)
+
+CodeBuild creatted underline ressourrces for VPC. Let's verify codebuild log
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/7979ecfe-7497-4bcf-a1eb-9e12cb9b8e31)
+
+The entire ressources are completed
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/41ef09f8-f5cb-447e-a532-1f9b4657fd71)
+
+Initializing the backend...
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0860d9f6-055b-469a-875c-d77d27e2b9d7)
+
+Terraform has been successfully initialized
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/61ef69b7-b4ae-4ed3-9dff-c24537b1ae52)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 0. Confirm SNS Subscription in your email
 1. Verify EC2 Instances
 2. Verify Launch Templates (High Level)
