@@ -309,28 +309,38 @@ resource "aws_route53_record" "apps_dns" {
   }  
 }
 ```
+
+Let's create hosted zone "kalyandemo.com" in Route 53 console
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9e787e84-dfc5-4b2a-b052-90545789eab7)
+
+
 #### Step-07-04-03: dev.tfvars
 ```t
 # DNS Name
-dns_name = "devdemo1.devopsincloud.com"
+dns_name = "devdemo5.kalyandemo.com"
 ```
+
 #### Step-07-04-04: stag.tfvars
+
 ```t
 # DNS Name
-dns_name = "stagedemo1.devopsincloud.com"
+dns_name = "stagedemo5.kalyandemo.com"
 ```
+Let's create dns name record "stagedemo5.kalyandemo.com"
+
 
 ### Step-07-05: c11-acm-certificatemanager.tf
 - In your case, the domain names will change as per this step.
 ```t
 # Before
   subject_alternative_names = [
-    "*.devopsincloud.com"
+    "*.kalyandemo.com"
   ]
 
 # After
   subject_alternative_names = [
-    #"*.devopsincloud.com"
+    #"*.kalyandemo.com"
     var.dns_name  
   ]
 ```
@@ -851,9 +861,9 @@ arn:aws:iam::180789647333:role/service-role/codebuild-codebuild-tf-iacdevops-aws
 7. Access and Test
 ```t
 # Access and Test
-http://devdemo1.devopsincloud.com
-http://devdemo1.devopsincloud.com/app1/index.html
-http://devdemo1.devopsincloud.com/app1/metadata.html
+http://devdemo5.kalyandemo.com
+http://devdemo5.kalyandemo.com/app1/index.html
+http://devdemo5.kalyandemo.com/app1/metadata.html
 ```
 
 ## Step-19: Add Approval Stage before deploying to staging environment
@@ -915,9 +925,9 @@ http://devdemo1.devopsincloud.com/app1/metadata.html
 7. Access and Test
 ```t
 # Access and Test
-http://stagedemo1.devopsincloud.com
-http://stagedemo1.devopsincloud.com/app1/index.html
-http://stagedemo1.devopsincloud.com/app1/metadata.html
+http://stagedemo5.kalyandemo.com
+http://stagedemo5.kalyandemo.com/app1/index.html
+http://stagedemo5.kalyandemo.com/app1/metadata.html
 ```
  
 ## Step-24: Make a change and test the entire pipeline
