@@ -874,13 +874,16 @@ Download phase complete
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/3a6abd0f-3908-4001-8a2c-88c253ec55d4)
 
-Intall and pre build phases
+Intall and pre build phases completed
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/6f2c0f2c-fbea-46f4-a350-f403f6d512c1)
 
 Initializing the backend...
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0860d9f6-055b-469a-875c-d77d27e2b9d7)
+Successfully configured the backend "s3"! Terraform will automatically use this backend. " terraform.tfstate" is created
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e3547498-8608-4946-9638-1d1349d72d41)
+
 
 Terraform has been successfully initialized
 
