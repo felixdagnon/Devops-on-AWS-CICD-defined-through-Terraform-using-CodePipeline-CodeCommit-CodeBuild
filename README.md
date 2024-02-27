@@ -315,6 +315,8 @@ Let's create hosted zone "kalyandemo.com" in Route 53 console
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9e787e84-dfc5-4b2a-b052-90545789eab7)
 
 
+Let's create dns name record
+
 #### Step-07-04-03: dev.tfvars
 ```t
 # DNS Name
@@ -327,9 +329,6 @@ dns_name = "devdemo5.kalyandemo.com"
 # DNS Name
 dns_name = "stagedemo5.kalyandemo.com"
 ```
-Let's create dns name record "stagedemo5.kalyandemo.com"
-
-
 ### Step-07-05: c11-acm-certificatemanager.tf
 - In your case, the domain names will change as per this step.
 ```t
