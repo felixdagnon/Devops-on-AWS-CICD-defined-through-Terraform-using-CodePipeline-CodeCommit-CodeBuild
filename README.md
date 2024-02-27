@@ -5,7 +5,6 @@ Before delving into details, let’s first take a look at the picture.
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0c28eda5-ec5a-4642-afda-59561d69e894)
 
-
 As far as code functionality, my piece handles the following requirements:
 
 - a way to provision Permission Sets into the AWS Account that hosts the AWS SSO service;
@@ -980,7 +979,23 @@ Click on to view the certificate complete information
 
 ### Access and Test "http://devdemo5.kalyandemo.com/app1/index.html"
 
+The test is valid
+
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/dbd1567e-f953-4c69-8085-1da61e61c9da)
+
+### Access and Test "http://devdemo5.kalyandemo.com/app1/metadata.html"
+
+Matadata informations are completed. Two instances related private ip are refreshed. The load balancer is working
+
+The first availably zone
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/33df182c-554d-4233-9392-49ec0e208df0)
+
+The second availably zone
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/99e05713-a763-44c1-a1aa-3fc6c1a2dac2)
+
+
 
 
 
