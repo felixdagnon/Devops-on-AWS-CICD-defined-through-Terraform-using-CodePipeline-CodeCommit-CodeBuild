@@ -1217,6 +1217,14 @@ Pipeline looking
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e6beabe8-c59d-41c0-8f45-f7075d4a40c5)
 
+Source and build phases succeeded
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/59b06948-471d-4082-a1c0-6749ea453ffa)
+
+Email-Approval and Stage-Deploy phases succeeded
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/fdb8f24e-cbd8-4b2d-8a04-9f0f530762a1)
+
 ## Step-23: Verify Staging Environment
 
 0. Confirm SNS Subscription in your email
