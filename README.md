@@ -1326,6 +1326,7 @@ The second availably zone
 ## Step-24: Make a change and test the entire pipeline
 
 ### Step-24-01: c13-03-autoscaling-resource.tf
+
 - Increase minimum EC2 Instances from 2 to 3
 
 ```t
@@ -1377,11 +1378,26 @@ Autosclaling group modified in dev and increase capacity
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9554a499-03d3-4175-b899-960f08bafe50)
 
+Let's access and Test "http://devdemo5.kalyandemo.com/app1/metadata.html"
+
+We should have 4 private IP 
+
+
+
+
+
+
+
+
 - Approve at `Manual Approval` stage
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/62603d8d-a1fa-41be-8d14-2948f68cfd58)
   
 - Verify Stage Deploy Logs
+
+The number of instance increase to 4. 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/aecd8b17-7e18-4cf0-b041-2a96d27946ff)
 
 Autosclaling group modified in stage environement 2 ---> 4
 
