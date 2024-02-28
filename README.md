@@ -1266,9 +1266,6 @@ Load Balancer name "hr-stag" created with listeners
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f00ce78a-cf34-4e99-8026-c227a6e232f8)
 
-
-
-
 Let's check certificate created
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0021079b-af5b-481c-a117-60d4c73f2848)
