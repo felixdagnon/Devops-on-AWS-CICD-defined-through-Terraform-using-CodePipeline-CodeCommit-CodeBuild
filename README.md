@@ -1140,7 +1140,22 @@ Let's search this role "codebuild-stage-deploy-IACDEVOPS-CB-service-role" in IAM
 - Verify Build Stage (Dev Environment - Dev Depploy phase)
   
 - Verify Manual Approval Stage - Approve the change
-  
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c4af7e03-85d1-46ac-a3ae-624983528e0f)
+
+Let's go to email to approve 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/334fb7cb-c8d7-4db3-a7b8-6f55b784a12b)
+
+Let's consult email
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0be0be8c-d308-4454-b373-1121576663f6)
+
+## Review Approval Stage of pieline
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/5d26d058-b6db-4d07-8e19-38b5dc35297d)
+
+
 - Verify Stage Deploy Stage
   
   - Verify build logs
