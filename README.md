@@ -1038,31 +1038,81 @@ The second availably zone
 
 
 ## Step-20: Add Staging Environment Deploy Stage
+
 - Go to Services -> AWS CodePipeline -> tf-iacdevops-aws-cp1 -> Edit
+  
 ### Add Stage
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/a8ff40e2-7897-4400-993f-a8763461eee6)
+
   - Name: Stage-Deploy
+    
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0bcd8521-5a46-4b8d-a8b4-7569089cd307)
+
 ### Add Action Group
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/52aae07b-c004-40e2-b856-2baf41d32855)
+
 - Action Name: Stage-Deploy
+  
 - Region: US East (N.Virginia)
+  
 - Action Provider: AWS CodeBuild
+  
 - Input Artifacts: Source Artifact
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d56455b5-093f-43d1-8b52-d625f0225e17)
+  
 - **Project Name:** Click on **Create Project**
-  - **Project Name:** stage-deploy-tf-iacdevops-aws-cp1
+  
+  - **Project Name:** stage-deploy-IACDEVOPS-CB
+    
   - **Description:** CodeBuild Project for Staging Environment of IAC DevOps Terraform Demo
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/7ea09a55-c8ab-49ed-9b2f-02fb5e88447d)
+
   - **Environment image:** Managed Image
+    
   - **Operating System:** Amazon Linux 2
+    
   - **Runtimes:** Standard
+    
   - **Image:** latest available today (aws/codebuild/amazonlinux2-x86_64-standard:3.0)
+    
   - **Environment Type:** Linux
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/69b13e21-dd46-40e0-860d-69c75c923a26)
+    
   - **Service Role:** New (leave to defaults including Role Name)
+    
   - **Build specifications:** use a buildspec file
+    
   - **Buildspec name - optional:** buildspec-stag.yml  (Ensure that this file is present in root folder of your github repository)
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/6cfc96a0-c9d7-4ec6-b068-6be05c3b14a9)
+    
   - Rest all leave to defaults
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d73c2c07-0617-4d43-aba0-6c6e12a62f6c)
+
   - Click on **Continue to CodePipeline**
+    
 - **Project Name:** This value should be auto-populated with `stage-deploy-tf-iacdevops-aws-cp1`
+  
 - **Build Type:** Single Build
+  
 - Click on **Done**
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/23fccad1-408e-4ded-8af3-9f98f836035c)
+
+- Review Edit Action
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0297f9ad-6dea-442a-95f6-f3dfeded2d6e)
+
 - Click on **Save**
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/fde760f6-b7a1-4dbf-8d52-9648592fe93b)
+
 
 ## Step-21: Update the IAM Role
 - Update the IAM Role created as part of this `stage-deploy-tf-iacdevops-aws-cp1` CodeBuild project by adding the policy `systems-manger-get-parameter-access1`
