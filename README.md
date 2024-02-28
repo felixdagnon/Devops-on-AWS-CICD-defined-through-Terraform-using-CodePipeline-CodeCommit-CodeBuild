@@ -1113,17 +1113,36 @@ The second availably zone
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/fde760f6-b7a1-4dbf-8d52-9648592fe93b)
 
+- Now we add "Manual approval" and "Stage-Deploy"
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/04b684f2-b5ae-4a6c-a84c-47e36016fa87)
 
 ## Step-21: Update the IAM Role
+
+Let's search this role "codebuild-stage-deploy-IACDEVOPS-CB-service-role" in IAM role service
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/a39011c8-a59e-4687-88df-3c483b8bfc37)
+
 - Update the IAM Role created as part of this `stage-deploy-tf-iacdevops-aws-cp1` CodeBuild project by adding the policy `systems-manger-get-parameter-access1`
 
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/5d23d939-83df-43c2-9105-f3902f3f3e0c)
+ 
+
+
 ## Step-22: Run the Pipeline 
-- Go to Services -> AWS CodePipeline -> tf-iacdevops-aws-cp1 
+
+- Go to Services -> AWS CodePipeline -> tf-iacdevops-aws-cp1
+  
 - Click on **Release Change**
+
 - Verify Source Stage
+  
 - Verify Build Stage (Dev Environment - Dev Depploy phase)
+  
 - Verify Manual Approval Stage - Approve the change
+  
 - Verify Stage Deploy Stage
+  
   - Verify build logs
 
 ## Step-23: Verify Staging Environment
