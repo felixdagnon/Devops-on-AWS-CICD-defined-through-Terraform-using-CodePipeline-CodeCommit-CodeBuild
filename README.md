@@ -1483,7 +1483,26 @@ Let's verivy pipeline
 
 Edit pipeline in approval stage
 
-  
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/835d3a83-84cc-4d29-a706-ee991bb41041)
+
+Change SNS Tipic
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c8963260-0dcd-411a-98aa-bd7c9a97bff1)
+
+Release pipeline
+
+Reveiw Email-Approval stage and approve
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/504ba803-a1f5-448b-991b-eb459f920af0)
+
+All ressources in Stage-Deploy are destroyed
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/3f38441b-53b2-4eac-9ec3-1f3e20b13fc8)
+
+
+
+
+
 - Verify Stage Deploy Logs
 
 
