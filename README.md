@@ -722,15 +722,12 @@ Let's check Github
 
   ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0a7af328-61bd-4653-a152-fe086eb7449a)
 
-  
-
 ### Add Deploy Stage
 
 - Click on **Skip Deploy Stage**
 
  ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9ed6745a-eddf-424c-b9d3-afa02b33d51e)
 
-  
 ### Review Stage
 
 - Click on **Create Pipeline**
@@ -787,7 +784,6 @@ Here "codebuild-codebuild-tf-iacdevops-aws-cp1-service-role"
 # CodeBuild Service Role ARN 
 arn:aws:iam::180789647333:role/service-role/codebuild-codebuild-tf-iacdevops-aws-cp1-service-role
 ```
-
 
 ### Step-16-02: Create IAM Policy with Systems Manager Get Parameter Read Permission
 
@@ -1401,15 +1397,23 @@ The number of instance increase to 4.
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c29d3174-210e-4c0d-9285-19197a7b83e8)
 
+Let's check the target groups 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/a6c6f166-56ba-48b5-8355-3a472818837b)
+
 - hr-stag: 4 EC2 Instances
 
 The number of instance increase to 4. 
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/aecd8b17-7e18-4cf0-b041-2a96d27946ff)
 
+Let's check the target groups 
 
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/aadbe18b-65a8-4f44-a032-484be3e5f671)
 
 ## Step-25: Destroy Resources
+
+
 
 ### Step-25-01: Update buildspec-dev.yml
 ```t
