@@ -1411,6 +1411,18 @@ Let's check the target groups
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/aadbe18b-65a8-4f44-a032-484be3e5f671)
 
+let's verify autoscaling group
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/8d01cced-c99d-495b-a0fc-5228b43f3d6a)
+
+let's verify autoscaling load balancer
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/b882a7dc-69ec-47a6-b24d-b9867724190a)
+
+
+
+
+
 ## Step-25: Destroy Resources
 
 
