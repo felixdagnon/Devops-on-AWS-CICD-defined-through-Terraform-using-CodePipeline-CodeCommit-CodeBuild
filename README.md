@@ -918,8 +918,6 @@ SNS topic confirmed
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/95e2b97d-443a-46ed-90f5-c098731288e4)
 
-
-
 1. Verify EC2 Instances
 
 "dev-BastionHost" and  and 2 instances "hr-dev" are created and running
@@ -948,7 +946,7 @@ Load Balancer name "hr-dev" created with listeners
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/8f09cbdb-7f42-4dbb-8097-75c908709be4)
 
-Let check check certificate created
+Let's check certificate created
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0021079b-af5b-481c-a117-60d4c73f2848)
 
@@ -1003,8 +1001,6 @@ The first availably zone
 The second availably zone
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d7d8b6e7-e284-4cea-99e4-8a704e6572ab)
-
-
 
 ## Step-19: Add Approval Stage before deploying to staging environment
 
@@ -1127,8 +1123,6 @@ Let's search this role "codebuild-stage-deploy-IACDEVOPS-CB-service-role" in IAM
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/5d23d939-83df-43c2-9105-f3902f3f3e0c)
  
-
-
 ## Step-22: Run the Pipeline 
 
 - Go to Services -> AWS CodePipeline -> tf-iacdevops-aws-cp1
@@ -1240,6 +1234,61 @@ Confirmation subscription
 Let's verify SNS Topic
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9f9ae445-b492-4570-b469-d5579eb46885)
+
+
+
+
+1. Verify EC2 Instances
+
+"stag-BastionHost" and and 2 instances "hr-stag" are created and running
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/92f5ea2d-5416-41e9-9e53-3f3b5786eacb)
+
+2. Verify Launch Templates (High Level)
+
+It's created the lunch template name "hr-stag-2024022810181677970000000c" because we added "prefix"+local.name
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0ed0a522-729d-44b9-9528-f6bb2efc98cc)
+
+3. Verify Autoscaling Group (High Level)
+
+It's created the Autoscaling Group name "hr-stag-2024022810181768120000000e" because we added "prefix"+local.name
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c2d47edf-3bf2-4748-9e8f-316e7331e1e1)
+
+let's verify Target tracking policy
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/425d913d-cb09-4081-a3aa-ee57ac3483fb)
+
+4. Verify Load Balancer
+
+Load Balancer name "hr-stag" created with listeners
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f00ce78a-cf34-4e99-8026-c227a6e232f8)
+
+
+
+
+Let's check certificate created
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0021079b-af5b-481c-a117-60d4c73f2848)
+
+5. Verify Load Balancer Target Group - Health Checks
+
+Target groups are Healthy because the instance running in availabities zones are Healthy.
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f8648b27-aca0-433e-b0bc-bfd87735d6f3)
+
+7. Access and Test
+
+
+
+
+
+
+
+
+
 
 
 
