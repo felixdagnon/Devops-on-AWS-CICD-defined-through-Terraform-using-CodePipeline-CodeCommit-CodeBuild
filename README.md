@@ -809,20 +809,15 @@ arn:aws:iam::180789647333:role/service-role/codebuild-codebuild-tf-iacdevops-aws
   
 - Click on **Create Policy**
 
-
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/294b22f4-5230-462e-8a3d-157eadefd1b7)
-
 
 ### Step-16-03: Associate this Policy to IAM Role
 
-
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/13d64ded-b0ca-4c82-9133-46d0a25d9ab5)
-
 
 - Go to Services -> IAM -> Roles -> Search for `codebuild-codebuild-tf-iacdevops-aws-cp1-service-role`
   
 - Attach the polic named `systems-manger-get-parameter-access`
-
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f3f9d304-7a4e-4e1d-bc49-0005ae328eda)
 
@@ -904,7 +899,6 @@ terraform apply completed
 All ressources are completed in Dev
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/3d5c94aa-dd1b-477f-b449-b582fc610825)
-
 
 0. Confirm SNS Subscription in your email
 
@@ -1162,6 +1156,17 @@ Approval Stage of pipeline succeeded
 Let's check log event. 
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/6d654e70-8390-4343-acdb-7f5cfcb69a00)
+
+Let's verify ressoures 
+
+### VPC is created and inside all ressources
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/67da90e2-a3e2-4a85-a42a-6ee99b40c79d)
+
+CodeBuild created underline ressourrces for VPC.
+
+Let's verify codebuild log
+
 
 It shows build and post build state succeeded
 
