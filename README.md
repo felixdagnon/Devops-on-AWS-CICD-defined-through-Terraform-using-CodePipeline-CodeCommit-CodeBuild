@@ -1213,9 +1213,9 @@ All ressources are completed in Stage environment
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/b2dc4a35-02cc-4d67-90ab-9039708c416c)
 
+Pipeline looking
 
-
-
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e6beabe8-c59d-41c0-8f45-f7075d4a40c5)
 
 ## Step-23: Verify Staging Environment
 
