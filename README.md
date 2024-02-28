@@ -1367,6 +1367,12 @@ Email-Approval and Stage-Deploy phases succeeded
 
 - Verify Dev Deploy Logs
 
+Let's verify instances
+
+The number of instance increase to 4. 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c29d3174-210e-4c0d-9285-19197a7b83e8)
+
 Autosclaling group modified in dev and increase capacity
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9554a499-03d3-4175-b899-960f08bafe50)
@@ -1377,7 +1383,7 @@ Autosclaling group modified in dev and increase capacity
   
 - Verify Stage Deploy Logs
 
-Autosclaling group modified in dev environement 2 ---> 4
+Autosclaling group modified in stage environement 2 ---> 4
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/6a0f2d15-5dd8-465c-8abc-9cb63580c73c)
 
