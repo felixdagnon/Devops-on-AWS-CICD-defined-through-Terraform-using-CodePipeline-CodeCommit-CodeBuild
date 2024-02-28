@@ -1362,10 +1362,6 @@ Source and build phases succeeded
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/24c9fafa-fcdd-4c0d-ab62-b7ff3644d425)
 
-Email-Approval and Stage-Deploy phases succeeded
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/7d78dbc1-6120-4e7b-98e1-5edddde1d43c)
-
 - Verify Dev Deploy Logs
 
 Autosclaling group modified in dev and increase capacity
@@ -1375,6 +1371,11 @@ Autosclaling group modified in dev and increase capacity
 - Approve at `Manual Approval` stage
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/62603d8d-a1fa-41be-8d14-2948f68cfd58)
+
+Email-Approval and Stage-Deploy phases succeeded
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/7d78dbc1-6120-4e7b-98e1-5edddde1d43c)
+
   
 - Verify Stage Deploy Logs
 
