@@ -1368,36 +1368,15 @@ Email-Approval and Stage-Deploy phases succeeded
 
 - Verify Dev Deploy Logs
 
-Let's verify instances
-
-The number of instance increase to 4. 
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c29d3174-210e-4c0d-9285-19197a7b83e8)
-
 Autosclaling group modified in dev and increase capacity
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9554a499-03d3-4175-b899-960f08bafe50)
-
-Let's access and Test "http://devdemo5.kalyandemo.com/app1/metadata.html"
-
-We should have 4 private IP 
-
-
-
-
-
-
-
 
 - Approve at `Manual Approval` stage
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/62603d8d-a1fa-41be-8d14-2948f68cfd58)
   
 - Verify Stage Deploy Logs
-
-The number of instance increase to 4. 
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/aecd8b17-7e18-4cf0-b041-2a96d27946ff)
 
 Autosclaling group modified in stage environement 2 ---> 4
 
@@ -1407,8 +1386,6 @@ Deployment complete succeeded
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e2bf8676-9447-4946-83b5-ee8ef9efb3cc)
 
-
-
 ### Step-24-04: Verify EC2 Instances
 
 - Go to Services -> EC2 Instances
@@ -1416,10 +1393,23 @@ Deployment complete succeeded
 - Newly created instances should be visible.
   
 - hr-dev: 4 EC2 Instances
-  
+
+Let's verify instances
+
+The number of instance increase to 4. 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c29d3174-210e-4c0d-9285-19197a7b83e8)
+
 - hr-stag: 4 EC2 Instances
 
+The number of instance increase to 4. 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/aecd8b17-7e18-4cf0-b041-2a96d27946ff)
+
+
+
 ## Step-25: Destroy Resources
+
 ### Step-25-01: Update buildspec-dev.yml
 ```t
 # Before
