@@ -1159,7 +1159,7 @@ Review
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/5d26d058-b6db-4d07-8e19-38b5dc35297d)
 
-pproval Stage of pipeline succeeded
+Approval Stage of pipeline succeeded
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9311bc3b-9f13-4795-aa2e-aee38df405d2)
 
@@ -1181,17 +1181,17 @@ The entire ressources are completed
 
 Download phase complete
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/3a6abd0f-3908-4001-8a2c-88c253ec55d4)
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/744aafee-d960-40ec-8851-24537bf675d1)
 
 Intall and pre build phases completed
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/6f2c0f2c-fbea-46f4-a350-f403f6d512c1)
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/46802df7-d751-487e-b21f-5eca9a00e0fd)
 
 Initializing the backend...
 
 Successfully configured the backend "s3"! Terraform will automatically use this backend.
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e3547498-8608-4946-9638-1d1349d72d41)
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f86bfee9-815b-41ec-b554-92815b07b1c8)
 
  " terraform.tfstate" is created is S3
 
