@@ -863,7 +863,7 @@ Let's verify ressoures
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/2d355af8-5243-46ce-8a76-c51be9c5a286)
 
-CodeBuild creatted underline ressourrces for VPC. Let's verify codebuild log
+CodeBuild created underline ressourrces for VPC. Let's verify codebuild log
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/7979ecfe-7497-4bcf-a1eb-9e12cb9b8e31)
 
@@ -1163,10 +1163,72 @@ pproval Stage of pipeline succeeded
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9311bc3b-9f13-4795-aa2e-aee38df405d2)
 
-
 - Verify Stage Deploy Stage
   
+Let's check log event. 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/6d654e70-8390-4343-acdb-7f5cfcb69a00)
+
+It shows build and post build state succeeded
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/8c68c28d-21f3-4bd4-9453-73ca64962915)
+
   - Verify build logs
+
+
+
+The entire ressources are completed
+
+Download phase complete
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/3a6abd0f-3908-4001-8a2c-88c253ec55d4)
+
+Intall and pre build phases completed
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/6f2c0f2c-fbea-46f4-a350-f403f6d512c1)
+
+Initializing the backend...
+
+Successfully configured the backend "s3"! Terraform will automatically use this backend.
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e3547498-8608-4946-9638-1d1349d72d41)
+
+ " terraform.tfstate" is created is S3
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/55b6f0f9-da31-4867-9459-d043d70eab27)
+
+Terraform has been successfully initialized. 
+
+Running command terraform validate, terraform plan, terraform apply
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/4739473c-c60d-4453-a336-e06d98a2f623)
+
+terraform plan completed 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/fbe6af95-19a8-43c8-b016-e9b4eb622017)
+
+terraform apply completed 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/56c48dcf-179c-470f-b393-e329b28d5660)
+
+All ressources are completed in Stage environment
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/3d5c94aa-dd1b-477f-b449-b582fc610825)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Step-23: Verify Staging Environment
 
