@@ -1323,13 +1323,11 @@ The second availably zone
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/52da223a-fd13-4361-afae-5554eaacbdce)
 
-
-
- 
 ## Step-24: Make a change and test the entire pipeline
 
 ### Step-24-01: c13-03-autoscaling-resource.tf
 - Increase minimum EC2 Instances from 2 to 3
+
 ```t
 # Before
   desired_capacity = 2
@@ -1340,11 +1338,12 @@ The second availably zone
   max_size = 10
   min_size = 4
 ```
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/14003e38-83e1-4e57-a36c-fa9eea9af18d)
+
 ### Step-24-02: Commit Changes via Git Repo
 ```t
 # Verify Changes
 git status
-
 # Commit Changes to Local Repository
 git add .
 git commit -am "ASG Min Size from 2 to 4"
@@ -1352,16 +1351,50 @@ git commit -am "ASG Min Size from 2 to 4"
 # Push changes to Remote Repository
 git push
 ```
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/448c841d-56d9-4b48-8072-5f4cfd331d11)
+
 ### Step-24-03: Review Build Logs
+
 - Go to Services -> CodePipeline -> tf-iacdevops-aws-cp1
+
+Source and build phases succeeded
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/24c9fafa-fcdd-4c0d-ab62-b7ff3644d425)
+
+Email-Approval and Stage-Deploy phases succeeded
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/7d78dbc1-6120-4e7b-98e1-5edddde1d43c)
+
 - Verify Dev Deploy Logs
+
+Autosclaling group modified in dev and increase capacity
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9554a499-03d3-4175-b899-960f08bafe50)
+
 - Approve at `Manual Approval` stage
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/62603d8d-a1fa-41be-8d14-2948f68cfd58)
+  
 - Verify Stage Deploy Logs
 
+Autosclaling group modified in dev environement 2 ---> 4
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/6a0f2d15-5dd8-465c-8abc-9cb63580c73c)
+
+Deployment complete succeeded
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e2bf8676-9447-4946-83b5-ee8ef9efb3cc)
+
+
+
 ### Step-24-04: Verify EC2 Instances
+
 - Go to Services -> EC2 Instances
+  
 - Newly created instances should be visible.
+  
 - hr-dev: 4 EC2 Instances
+  
 - hr-stag: 4 EC2 Instances
 
 ## Step-25: Destroy Resources
