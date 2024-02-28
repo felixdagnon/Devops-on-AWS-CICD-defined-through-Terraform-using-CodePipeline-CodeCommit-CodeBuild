@@ -1419,15 +1419,10 @@ let's verify autoscaling load balancer
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/b882a7dc-69ec-47a6-b24d-b9867724190a)
 
-
-
-
-
 ## Step-25: Destroy Resources
 
-
-
 ### Step-25-01: Update buildspec-dev.yml
+
 ```t
 # Before
     TF_COMMAND: "apply"
@@ -1436,7 +1431,11 @@ let's verify autoscaling load balancer
     #TF_COMMAND: "apply"
     TF_COMMAND: "destroy"    
 ```
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/027a7c02-c98e-4cdb-a7ad-26d167f3dd25)
+
 ### Step-25-02: Update buildspec-stag.yml
+
 ```t
 # Before
     TF_COMMAND: "apply"
@@ -1445,7 +1444,11 @@ let's verify autoscaling load balancer
     #TF_COMMAND: "apply"
     TF_COMMAND: "destroy"    
 ```
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/578bfca8-53be-4575-916a-c44c16f792fa)
+
 ### Step-25-03: Commit Changes via Git Repo
+
 ```t
 # Verify Changes
 git status
@@ -1457,16 +1460,39 @@ git commit -am "Destroy Resources"
 # Push changes to Remote Repository
 git push
 ```
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/57f3c2c7-226c-4267-b906-2eeeb14769cf)
+
 ### Step-25-03: Review Build Logs
+
 - Go to Services -> CodePipeline -> tf-iacdevops-aws-cp1
+  
 - Verify Dev Deploy Logs
+
+  All ressouces are destroying
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/06b63944-c08d-4e08-b179-f279ca8e1a39)
+
+Let's verivy pipeline
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d80a7971-c79f-4250-9a51-7eb1a19b11ea)
+  
 - Approve at `Manual Approval` stage
+
+ ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/885eac8e-16bc-403f-8976-981641e98b1f)
+
+Edit pipeline in approval stage
+
+  
 - Verify Stage Deploy Logs
 
 
 ## Step-26: Change Everything back to original Demo State
+
 ### Step-26-01: c13-03-autoscaling-resource.tf
+
 - Change them back to original state
+  
 ```t
 # Before
   desired_capacity = 4
@@ -1477,8 +1503,11 @@ git push
   max_size = 10
   min_size = 2
 ```
+
 ### Step-26-02: buildspec-dev.yml and buildspec-stag.yml
+
 - Change them back to original state
+  
 ```t
 # Before
     #TF_COMMAND: "apply"
@@ -1488,6 +1517,7 @@ git push
     #TF_COMMAND: "destroy"     
 ```
 ### Step-26-03: Commit Changes via Git Repo
+
 ```t
 # Verify Changes
 git status
