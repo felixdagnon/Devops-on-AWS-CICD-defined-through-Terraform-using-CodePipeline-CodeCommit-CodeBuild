@@ -1279,14 +1279,55 @@ Target groups are Healthy because the instance running in availabities zones are
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/a7673779-4015-45b0-8785-54869026a106)
 
 6. Access and Test
+
 ```t
 # Access and Test
 http://stagedemo5.kalyandemo.com
 http://stagedemo5.kalyandemo.com/app1/index.html
 http://stagedemo5.kalyandemo.com/app1/metadata.html
 ```
+
+### Access and Test "http://stagedemo5.kalyandemo.com"
+
+Let's first verify Route 53. The record name "stagdemo5.kalyandemo.com" created
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/7b5a9245-2e2a-47e3-9a53-182d95dc09ea)
+
+Copy this link "stagdemo5.kalyandemo.com" and paste url
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/466652fd-15b4-4262-933c-8e3bc4d384b6)
+
+We obtain https connexion secure
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f42fb884-0c1d-433b-85cc-78fc0d597bfe)
+
+Click on to view the certificate complete information
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/71a7750a-4594-43d3-95e3-ef4d83788fc7)
+
+### Access and Test "http://stagedemo5.kalyandemo.com/app1/index.html"
+
+The test is valid
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d3e96ef3-1e34-4db0-a9ec-e9bdb4ca534b)
+
+### Access and Test "http://stagedemo5.kalyandemo.com/app1/metadata.html"
+
+Matadata informations are completed. Two instances related private ip are refreshed. The load balancer is working
+
+The first availably zone
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d07ae1a2-9074-452e-952f-fb8865d2f864)
+
+The second availably zone
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/52da223a-fd13-4361-afae-5554eaacbdce)
+
+
+
  
 ## Step-24: Make a change and test the entire pipeline
+
 ### Step-24-01: c13-03-autoscaling-resource.tf
 - Increase minimum EC2 Instances from 2 to 3
 ```t
