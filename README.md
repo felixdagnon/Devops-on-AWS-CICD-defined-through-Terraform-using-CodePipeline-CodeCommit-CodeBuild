@@ -1505,6 +1505,10 @@ All ressources in Stage-Deploy are destroyed
 
 - Pipeline looking
 
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/7f8f1808-c8ff-4d2c-8cc9-471bbef4166a)
+
+All phases completed
+
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/4ab9eb85-9c99-4c7c-9d05-17e86d042d01)
 
 - Let's check ressources
@@ -1512,8 +1516,6 @@ All ressources in Stage-Deploy are destroyed
 All EC2 are terminated
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/5245f72f-af8d-471b-b3f6-d69e8d8ef0d7)
-
-
 
 ## Step-26: Change Everything back to original Demo State
 
