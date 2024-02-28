@@ -1151,9 +1151,17 @@ Let's consult email
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0be0be8c-d308-4454-b373-1121576663f6)
 
-## Review Approval Stage of pieline
+## Review Approval Stage of pipeline
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d820fc1e-7f12-4079-b708-38020c5673b7)
+
+Review
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/5d26d058-b6db-4d07-8e19-38b5dc35297d)
+
+pproval Stage of pipeline succeeded
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9311bc3b-9f13-4795-aa2e-aee38df405d2)
 
 
 - Verify Stage Deploy Stage
