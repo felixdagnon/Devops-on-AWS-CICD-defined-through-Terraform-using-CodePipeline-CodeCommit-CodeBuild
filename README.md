@@ -1169,12 +1169,33 @@ pproval Stage of pipeline succeeded
   - Verify build logs
 
 ## Step-23: Verify Staging Environment
+
 0. Confirm SNS Subscription in your email
+
+Notification by email
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/ea992a10-a0b4-4cfe-8185-7455984b0ad8)
+
+Confirmation subscription
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/a4278aef-8e4f-417a-aeb2-6d1bbbeefbb0)
+
+Let's verify SNS Topic
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9f9ae445-b492-4570-b469-d5579eb46885)
+
+
+
 1. Verify EC2 Instances
+
 2. Verify Launch Templates (High Level)
+
 3. Verify Autoscaling Group (High Level)
+
 4. Verify Load Balancer
+
 5. Verify Load Balancer Target Group - Health Checks
+
 7. Access and Test
 ```t
 # Access and Test
