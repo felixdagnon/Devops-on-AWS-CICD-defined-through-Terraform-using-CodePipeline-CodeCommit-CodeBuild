@@ -910,6 +910,15 @@ All ressources are completed in Dev
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/b96ba149-4717-495a-a2f5-8d1240505560)
 
+Subscription confirmed
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/6ae9a114-86fb-44ef-90e5-b2614a184288)
+
+SNS topic confirmed
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/95e2b97d-443a-46ed-90f5-c098731288e4)
+
+
 
 1. Verify EC2 Instances
 
@@ -997,26 +1006,36 @@ The second availably zone
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ## Step-19: Add Approval Stage before deploying to staging environment
+
 - Go to Services -> AWS CodePipeline -> tf-iacdevops-aws-cp1 -> Edit
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f51169b8-1b81-45d4-a420-5b98d3cd7c8a)
+
 ### Add Stage
+
   - Name: Email-Approval
+    
 ### Add Action Group
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c7bee0f9-f103-4aec-b49e-516f502ab134)
+
 - Action Name: Email-Approval
+
+ ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/98081037-2ff9-4ebb-8f79-c2ae3515537c)
+
+- Action Group
+
+  ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/8222a25a-5d46-444a-a991-216b31bf11a0)
+
 - Action Provider: Manual Approval
+  
 - SNS Topic: Select SNS Topic from drop down
+  
 - Comments: Approve to deploy to staging environment
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/2739d443-8fbd-41b1-8ba2-6e262d1d22ec)
+
 
 ## Step-20: Add Staging Environment Deploy Stage
 - Go to Services -> AWS CodePipeline -> tf-iacdevops-aws-cp1 -> Edit
