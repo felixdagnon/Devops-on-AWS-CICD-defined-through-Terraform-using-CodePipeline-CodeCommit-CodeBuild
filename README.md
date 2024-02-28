@@ -956,7 +956,7 @@ Target groups are Healthy because the instance running in availabities zones are
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f8648b27-aca0-433e-b0bc-bfd87735d6f3)
 
-7. Access and Test
+6. Access and Test
 
 ```t
 # Access and Test
@@ -1235,9 +1235,6 @@ Let's verify SNS Topic
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9f9ae445-b492-4570-b469-d5579eb46885)
 
-
-
-
 1. Verify EC2 Instances
 
 "stag-BastionHost" and and 2 instances "hr-stag" are created and running
@@ -1268,38 +1265,15 @@ Load Balancer name "hr-stag" created with listeners
 
 Let's check certificate created
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0021079b-af5b-481c-a117-60d4c73f2848)
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/8fce420b-1d65-4b06-b75e-1c87d2bc127b)
 
 5. Verify Load Balancer Target Group - Health Checks
 
 Target groups are Healthy because the instance running in availabities zones are Healthy.
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f8648b27-aca0-433e-b0bc-bfd87735d6f3)
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/a7673779-4015-45b0-8785-54869026a106)
 
-7. Access and Test
-
-
-
-
-
-
-
-
-
-
-
-
-1. Verify EC2 Instances
-
-2. Verify Launch Templates (High Level)
-
-3. Verify Autoscaling Group (High Level)
-
-4. Verify Load Balancer
-
-5. Verify Load Balancer Target Group - Health Checks
-
-7. Access and Test
+6. Access and Test
 ```t
 # Access and Test
 http://stagedemo5.kalyandemo.com
