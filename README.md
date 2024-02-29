@@ -59,6 +59,42 @@ shape of a usable artifact;
 - AWS S3 to keep any artifacts that result out of a successful Build Stage, for later use and posterity.
 
 
+## Step-00: Introduction
+
+1- Terraform Backend with backend-config
+
+2- How to create multiple environments related Pipeline with single TF Config files in Terraform ?
+
+3- As part of Multiple environments we are going to create dev and stag environments
+
+4- We are going build IaC DevOps Pipelines using
+
+  - AWS CodeBuild
+
+  - AWS CodePipeline
+
+  - Github
+
+5- We are going to streamline the terraform-manifests taken from section-15 and streamline that to support Multiple environments.
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/eb2ce949-a1fd-4dcc-85b7-7a24d512b774)
+
+In dev environment
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e5ba328c-7568-4b08-80f0-aeec36705a3f)
+
+In stage environment
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f456132f-6af3-4ea7-b13f-93994382802d)
+
+
+
+
+
+
+
+
+
 
 
 
