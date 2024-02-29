@@ -125,13 +125,19 @@ whatever the resources we have configured in the Terraform configurations, the s
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f456132f-6af3-4ea7-b13f-93994382802d)
 
 
+The advantage of using AWS CodePipeline here is we will use only one version of the entire terraform manifests
+
+template for dev environment and then staging environment.
+
+To do so, we are going to create different stuff like dev.conf will reference the dev related Terraform state files, 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/77b71ad5-58a2-4ed3-8f0e-72eb78fcfe14)
+
+and in the same way stag.conf will reference the staging related terraform.tfstate files.
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/075f0dde-de44-47b8-bb7d-3ab27e00e49c)
 
 
-
-The advantage of using AWS CodePipeline here is we will use only one version of the entire terraform manifests template for dev environment and then staging environment.
-
-
-To do so, we are going to create different stuff like dev.conf will reference the dev related Terraform state files, and in the same way stag.conf will reference the staging related terraform.tfstate files.
 
 
 So terraform.tfstate file access the underlying DynanaDB  for the real resources whatever it is created in the cloud. Which means all the information related to the resources created in the cloud using Terraform is stored inside this tfstate file.
