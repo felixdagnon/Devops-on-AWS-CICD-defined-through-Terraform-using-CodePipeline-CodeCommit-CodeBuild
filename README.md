@@ -81,7 +81,7 @@ shape of a usable artifact;
 
 In dev environment
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e5ba328c-7568-4b08-80f0-aeec36705a3f)
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f3ac3fa0-b2c7-47db-bf9a-1577a3df539c)
 
 In stage environment
 
