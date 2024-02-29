@@ -75,7 +75,7 @@ shape of a usable artifact;
 
   - Github
 
-5- We are going to streamline the terraform-manifests taken from section-15 and streamline that to support Multiple environments.
+5- We are going to streamline the terraform-manifests taken from section-15 and streamline that to support multiple environments.
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/eb2ce949-a1fd-4dcc-85b7-7a24d512b774)
 
@@ -97,11 +97,11 @@ Build specification files will be use for Dev and Staging CodePipeline
 
 buildpec.dev.yml
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f692f233-ec69-4773-906c-1cae92966eb3)
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/404be862-a27b-46b8-8d36-f840c6f8d9d8)
 
 buildpec.stag.yml
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/16a32ccd-aa5e-4393-b07c-92063f68abf8)
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c1dd9956-d6b5-40b3-8656-4610213d8693)
 
 
 
