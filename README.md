@@ -171,8 +171,6 @@ We are also going to create a buildspecdev.yml and then buildspecstaging.yml rel
 
 Build specification files will be use for Dev and Staging CodePipeline
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d97035bb-29ff-4f21-a319-f7fa8da9dd20)
-
 buildpec.dev.yml
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/404be862-a27b-46b8-8d36-f840c6f8d9d8)
