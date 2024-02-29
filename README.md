@@ -1,9 +1,6 @@
 # Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild
 Devops on AWS CI/CD defined through Terraform using CodePipeline, CodeCommit CodeBuild
 
-Before delving into details, let’s first take a look at the picture.
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0c28eda5-ec5a-4642-afda-59561d69e894)
 
 As far as code functionality, my piece handles the following requirements:
 
@@ -47,6 +44,154 @@ shape of a usable artifact;
 - AWS CodePipeline is the CI/CD framework that links the other two services together (as well as others) through executable Stages;
 
 - AWS S3 to keep any artifacts that result out of a successful Build Stage, for later use and posterity.
+
+  
+
+
+Before delving into details, let’s first take a look at the picture.
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0c28eda5-ec5a-4642-afda-59561d69e894)
+
+We are going to focus on IaC DevOps with AWS CodePipeline to implemente VPC with WebApp and DB tiers, EC2 instances, 
+
+Bastion host and Security groups, Application Load Balancer, and also Auto Scaling with Launch Templates.
+
+All these resources will be implement with Terraform using TF Config files will for all the infrastructure supposed to build.
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/67009b84-8a6a-405d-8266-235d2cc26e3b)
+
+First  create GitHub repository and then let’s check into our GitHub repository the Terraform manifests related to our AWS use case.
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/2a893932-cf52-4479-aedb-a6b7608bb08b)
+
+The next step, we will create AWS CodePipeline. So as part of that, when we are creating the CodePipeline, we will reference the 
+
+source as our GitHub repository we have created.
+
+We  will create a CodeBuild project for dev environment  in deploy stage.
+
+In this overall implementation, we are not going to see any deploy stage with CodeDeploy or any other tools provided by AWS,
+
+because AWS doesn't have any tools related to pipeline to deploy the Terraform configurations.
+
+So for that purpose, we need to leverage the AWS CodeBuild tool as our deploy tool.
+
+We are going to use CodeBuild tool as our CodeDeploy tool to deploy our Terraform configurations in AWS,
+
+or provision our infrastructure using Terraform.
+
+We will also create a manual approval stage in the pipeline and a CodeBuild project for our staging environment deploy.
+
+So here we are going to demonstrate for two environments but we can scale these to multiple environments accordingly.
+
+As a developer, or as a Terraform configuration admin, I will check in all my files to the GitHub repository.
+
+So when I'll make some change in the code and then push into GitHub repository. immediately CodePipeline will trigger,
+
+and it'll complete the source stage and then it will move to the deploy stage.In deploy stage, it is going to create 
+
+a dev environment in AWS with all resources.
+
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/ca67edc2-ca2d-46e1-b3ae-2d3290577af8)
+
+
+We will see from internet that it will create a DNS record, It will create Application Load Balancer, 
+
+It will create a certificate manager for creating the SSL certificates.
+
+It'll create the Auto Scaling groups with launch templates.
+
+It will create the NAT gateway for VPC and then outbound communication.
+
+It will create related IAM roles, then it will create the Batch in instances,
+
+and then it will also create the Simple Notification Service for Auto Scaling group alerts.
+
+All the these ressouces will be created in the dev deploy stage.
+
+
+And then, the pipeline, once this is successful, moves to the manual approval stage.
+
+Here the request will send, as an email notification to the respective manager who is provided in that SNS notification.
+
+And that respective manager need to approve this respective email, so that it can move on to the next stage in the pipeline
+
+Once  approved then the staging environment will start getting created. And in staging environment also, 
+
+whatever the resources we have configured in the Terraform configurations, the same things will be created.
+
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f456132f-6af3-4ea7-b13f-93994382802d)
+
+
+
+
+
+The advantage of using AWS CodePipeline here is we will use only one version of the entire terraform manifests template for dev environment and then staging environment.
+
+
+To do so, we are going to create different stuff like dev.conf will reference the dev related Terraform state files, and in the same way stag.conf will reference the staging related terraform.tfstate files.
+
+
+So terraform.tfstate file access the underlying DynanaDB  for the real resources whatever it is created in the cloud. Which means all the information related to the resources created in the cloud using Terraform is stored inside this tfstate file.
+
+For multiple environments, we are going to manage each environment state by using dev.conf and then stag.conf,
+
+
+
+In addition to that, for dev environment, dev.tfvars related environmental variables will be there. and for staging environment, stag.tfvars will be there, and terraform.tfvars will be generic .
+
+We are going to leverage all these single set of configuration files « tfconfigs »
+excluding the Terraform related variables and Terraform related state configuration
+as a single source to create multiple environments.
+
+
+
+So from here on, so whenever we create dev environment,
+so all this will be created and it is going to be devdemo1.devopsincloud.com.
+
+
+
+In the same way when we create the staging environment,
+it is going to be stagedemo1.devopsincloud.com.
+And all these ressources, whatever we have seen earlier also,
+are going to be get created using the AWS CodePipeline.
+
+
+
+
+
+we are going to make many changes to all these tfconfigs to support the multiple environments like dev, staging, production 
+
+For that we are going to change the naming convention
+of all of our resources which will have the local.name appended for them,
+
+
+
+so that that resource you can easily identify this belongs to this business division, hyphen, environment name, hyphen, and resource name.
+We are also going to create a buildspecdev.yml and then buildspecstaging.yml
+Related to dev and staging build specification files to implement CodePipeline.
+
+
+
+
+We will  implement all these changes zstep by step
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Step-00: Introduction
