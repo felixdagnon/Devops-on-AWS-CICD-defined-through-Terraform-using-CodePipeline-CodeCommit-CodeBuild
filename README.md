@@ -77,6 +77,9 @@ shape of a usable artifact;
 
 5- We are going to streamline the terraform-manifests taken from section-15 and streamline that to support Multiple environments.
 
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/e92ebb02-976f-4453-9dbf-0828d94eaee3)
+
+
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/eb2ce949-a1fd-4dcc-85b7-7a24d512b774)
 
 In dev environment
