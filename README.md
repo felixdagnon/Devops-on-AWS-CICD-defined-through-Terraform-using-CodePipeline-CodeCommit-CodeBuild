@@ -89,13 +89,11 @@ In stage environment
 
 We are going to use in tthis demo "TF configs" and make many chenges to all these "TF configs" to support multiple environments like Dev and Staging.
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/b4af6118-4961-49f9-aa32-b22a1e17afc9)
-
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/01445f2b-71c7-44dc-b4f0-447ed3cbd833)
 
 Build specification files will be use for Dev and Staging CodePipeline
 
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/125fa9ca-3604-4c14-9bff-902146323393)
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d97035bb-29ff-4f21-a319-f7fa8da9dd20)
 
 buildpec.dev.yml
 
