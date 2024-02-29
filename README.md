@@ -75,7 +75,9 @@ shape of a usable artifact;
 
   - Github
 
-5- We are going to streamline the terraform-manifests to support multiple environments.
+5- We are going to streamline the terraform-manifests to support multiple environments. 
+
+We will use these "TF configs" and make many changes to support multiple environments like Dev and Staging.
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/cad8fed2-4558-4a35-9a76-235a4b685a6c)
 
@@ -86,10 +88,6 @@ In dev environment
 In stage environment
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f456132f-6af3-4ea7-b13f-93994382802d)
-
-We are going to use in tthis demo "TF configs" and make many chenges to all these "TF configs" to support multiple environments like Dev and Staging.
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/01445f2b-71c7-44dc-b4f0-447ed3cbd833)
 
 Build specification files will be use for Dev and Staging CodePipeline
 
