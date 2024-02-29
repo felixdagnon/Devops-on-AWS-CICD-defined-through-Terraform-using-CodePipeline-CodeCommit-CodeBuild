@@ -93,6 +93,10 @@ and it'll complete the source stage and then it will move to the deploy stage.In
 a dev environment in AWS with all resources.
 
 
+We are going to leverage all these single set of configuration files to create multiple environments excluding the Terraform related variables.
+
+so whenever we create dev environment, all these resources will be created and it is going to be devdemo1.devopsincloud.com.
+
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/ca67edc2-ca2d-46e1-b3ae-2d3290577af8)
 
 
@@ -119,7 +123,9 @@ And that respective manager need to approve this respective email, so that it ca
 
 Once  approved then the staging environment will start getting created. And in staging environment also, 
 
-whatever the resources we have configured in the Terraform configurations, the same things will be created.
+whatever the resources we have configured in the Terraform configurations, the same resources will be created.
+
+it is going to be stagedemo1.devopsincloud.com and all these resources are going to be get created using the AWS CodePipeline.
 
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f456132f-6af3-4ea7-b13f-93994382802d)
@@ -155,52 +161,28 @@ and terraform.tfvars will be generic.
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d012aef3-cff9-4df1-ae52-6a9ccb96594b)
 
+We are going to make many changes to all these TF configs files to support the multiple environments like dev, staging or production.
 
-We are going to leverage all these single set of configuration files to create multiple environments excluding the Terraform related variables.
-
-so whenever we create dev environment, all these resources will be created and it is going to be devdemo1.devopsincloud.com.
-
-
-
-In the same way when we create the staging environment, it is going to be stagedemo1.devopsincloud.com
-and all these ressources, whatever we have seen earlier also,
-are going to be get created using the AWS CodePipeline.
-
-
-
-
-
-we are going to make many changes to all these tfconfigs to support the multiple environments like dev, staging, production 
-
-For that we are going to change the naming convention
-of all of our resources which will have the local.name appended for them,
-
-
+For that we are going to change the naming convention of all of our resources which will have the local.name appended for them.
 
 so that that resource you can easily identify this belongs to this business division, hyphen, environment name, hyphen, and resource name.
-We are also going to create a buildspecdev.yml and then buildspecstaging.yml
-Related to dev and staging build specification files to implement CodePipeline.
+
+We are also going to create a buildspecdev.yml and then buildspecstaging.yml related to dev and staging build specification files to implement CodePipeline.
+
+Build specification files will be use for Dev and Staging CodePipeline
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d97035bb-29ff-4f21-a319-f7fa8da9dd20)
+
+buildpec.dev.yml
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/404be862-a27b-46b8-8d36-f840c6f8d9d8)
+
+buildpec.stag.yml
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c1dd9956-d6b5-40b3-8656-4610213d8693)
 
 
-
-
-We will  implement all these changes zstep by step
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+We will implement all these changes step by step
 
 ## Step-00: Introduction
 
@@ -220,54 +202,10 @@ We will  implement all these changes zstep by step
 
 5- We are going to streamline the terraform-manifests to support multiple environments. 
 
-We will use these "TF configs" and make many changes to support multiple environments like Dev and Staging.
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/cad8fed2-4558-4a35-9a76-235a4b685a6c)
-
-In dev environment
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/ca67edc2-ca2d-46e1-b3ae-2d3290577af8)
-
-In stage environment
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f456132f-6af3-4ea7-b13f-93994382802d)
-
-Build specification files will be use for Dev and Staging CodePipeline
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d97035bb-29ff-4f21-a319-f7fa8da9dd20)
-
-buildpec.dev.yml
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/404be862-a27b-46b8-8d36-f840c6f8d9d8)
-
-buildpec.stag.yml
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c1dd9956-d6b5-40b3-8656-4610213d8693)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Step-01: Copy terraform-manifests from Section-15
 - Copy `terraform-manifests` from Section-15 `15-Autoscaling-with-Launch-Templates`
 - Update `private-key\terraform-key.pem` with your private key with same name.
-
 
 ## Step-02: c1-versions.tf - Terraform Backends
 ### Step-02-01 Add backend block as below 
