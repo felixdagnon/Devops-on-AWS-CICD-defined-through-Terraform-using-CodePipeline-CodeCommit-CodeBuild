@@ -137,31 +137,33 @@ and in the same way stag.conf will reference the staging related terraform.tfsta
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/075f0dde-de44-47b8-bb7d-3ab27e00e49c)
 
+So terraform.tfstate file access the underlying DynanaDB for the real resources whatever it is created in the cloud. 
 
-
-
-So terraform.tfstate file access the underlying DynanaDB  for the real resources whatever it is created in the cloud. Which means all the information related to the resources created in the cloud using Terraform is stored inside this tfstate file.
+Which means all the information related to the resources created in the cloud using Terraform is stored inside this tfstate file.
 
 For multiple environments, we are going to manage each environment state by using dev.conf and then stag.conf,
 
+In addition to that, for dev environment, dev.tfvars related environmental variables will be there. 
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f30f6679-2664-4323-be1b-5bfcc40e9a7e)
+
+and for staging environment, stag.tfvars will be there,
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/6a91339a-2724-4c59-9bc0-c3a171f5eb37)
+
+and terraform.tfvars will be generic.
+
+![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d012aef3-cff9-4df1-ae52-6a9ccb96594b)
 
 
-In addition to that, for dev environment, dev.tfvars related environmental variables will be there. and for staging environment, stag.tfvars will be there, and terraform.tfvars will be generic .
+We are going to leverage all these single set of configuration files to create multiple environments excluding the Terraform related variables.
 
-We are going to leverage all these single set of configuration files « tfconfigs »
-excluding the Terraform related variables and Terraform related state configuration
-as a single source to create multiple environments.
+so whenever we create dev environment, all these resources will be created and it is going to be devdemo1.devopsincloud.com.
 
 
 
-So from here on, so whenever we create dev environment,
-so all this will be created and it is going to be devdemo1.devopsincloud.com.
-
-
-
-In the same way when we create the staging environment,
-it is going to be stagedemo1.devopsincloud.com.
-And all these ressources, whatever we have seen earlier also,
+In the same way when we create the staging environment, it is going to be stagedemo1.devopsincloud.com
+and all these ressources, whatever we have seen earlier also,
 are going to be get created using the AWS CodePipeline.
 
 
