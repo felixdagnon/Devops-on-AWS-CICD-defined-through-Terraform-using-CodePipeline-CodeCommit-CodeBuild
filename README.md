@@ -1022,7 +1022,6 @@ The second availably zone
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/2739d443-8fbd-41b1-8ba2-6e262d1d22ec)
 
-
 ## Step-20: Add Staging Environment Deploy Stage
 
 - Go to Services -> AWS CodePipeline -> tf-iacdevops-aws-cp1 -> Edit
