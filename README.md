@@ -72,7 +72,7 @@ We are going to use CodeBuild tool as our CodeDeploy tool to deploy our Terrafor
 
 or provision our infrastructure using Terraform.
 
-We will also create a manual approval stage in the pipeline and a CodeBuild project for our staging environment deploy.
+We will also create a manual approval stage in the pipeline and a CodeBuild project for our deploy staging environment.
 
 So here we are going to demonstrate for two environments but we can scale these to multiple environments accordingly.
 
