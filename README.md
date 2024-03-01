@@ -66,7 +66,7 @@ In this overall implementation, we are not going to see any deploy stage with Co
 
 because AWS doesn't have any tools related to pipeline to deploy the Terraform configurations.
 
-So for that purpose, we need to leverage the AWS CodeBuild tool as our deploy tool.
+For that purpose, we need to leverage the AWS CodeBuild tool as our deploy tool.
 
 We are going to use CodeBuild tool as our CodeDeploy tool to deploy our Terraform configurations in AWS,
 
@@ -78,7 +78,7 @@ So here we are going to demonstrate for two environments but we can scale these 
 
 As a developer, or as a Terraform configuration admin, I will check in all my files to the GitHub repository.
 
-So when I'll make some change in the code and then push into GitHub repository. immediately CodePipeline will trigger,
+When we will make some change in the code and then push into GitHub repository. immediately CodePipeline will trigger,
 
 and it'll complete the source stage and then it will move to the deploy stage.In deploy stage, it is going to create 
 
