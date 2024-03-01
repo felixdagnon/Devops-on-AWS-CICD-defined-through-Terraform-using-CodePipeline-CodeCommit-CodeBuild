@@ -38,8 +38,6 @@ shape of a usable artifact;
 - AWS S3 to keep any artifacts that result out of a successful Build Stage, for later use and posterity.
 
   
-
-
 Before delving into details, let’s first take a look at the picture.
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/0c28eda5-ec5a-4642-afda-59561d69e894)
@@ -85,7 +83,7 @@ and it'll complete the source stage and then it will move to the deploy stage.In
 a dev environment in AWS with all resources.
 
 
-We are going to leverage all these single set of configuration files to create multiple environments excluding the Terraform related variables.
+We are going to leverage all these single set of configuration files to create multiple environments excluding the Terraform related variables (dev.tfvars, stag.tfvars, terraform.tfvars).
 
 so whenever we create dev environment, all these resources will be created and it is going to be devdemo1.devopsincloud.com.
 
