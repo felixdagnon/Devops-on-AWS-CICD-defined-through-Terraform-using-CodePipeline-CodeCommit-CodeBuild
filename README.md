@@ -176,9 +176,9 @@ buildpec.stag.yml
 
 We will implement all these changes step by step.
 
-## Step-01: Copy terraform-manifests from Section-15
-- Copy `terraform-manifests` from Section-15 `15-Autoscaling-with-Launch-Templates`
-- Update `private-key\terraform-key.pem` with your private key with same name.
+## Step-01: terraform-manifests 
+- Update `terraform-manifests` by creating `15-Autoscaling-with-Launch-Templates`
+- Create`private-key\terraform-key.pem` with your private key with same name.
 
 ## Step-02: c1-versions.tf - Terraform Backends
 ### Step-02-01 Add backend block as below 
