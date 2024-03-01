@@ -19,7 +19,7 @@ Different teams will have different Permission Sets assigned for different Accou
 
 The challenge comes from making this process a repeatable one with as little human interaction as possible,
 
-and the manager approve manually by Email before deploying to stage environement.
+and the resptective manager approve manually by Email before deploying to next environement ( staging or production).
 
 Let focus on CI/CD components from the diagram above.
 
