@@ -278,7 +278,7 @@ Only 30 files to manage across Dev, QA, Staging, Production and DR environments.
 
 ## Step-04: Merge vpc.auto.tfvars and ec2instance.auto.tfvars 
 - Merge `vpc.auto.tfvars` and `ec2instance.auto.tfvars` to environment specific `.tfvars` example `dev.tfvars` and `stag.tfvats`
-- Also don't provide `.auto.` in `dev.tfvars` or `stag.tfvars` if we want to leverage same TF Config files across environmets.
+- Also we want to leverage same TF Config files across environmets.
 - We are going to pass the `.tfvars` file as `-var-file` argument to `terraform apply` command
 ```t
 terraform apply -input=false -var-file=dev.tfvars -auto-approve  
