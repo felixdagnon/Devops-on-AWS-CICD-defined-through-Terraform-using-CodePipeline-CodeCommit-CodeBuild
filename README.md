@@ -343,51 +343,40 @@ business_divsion = "hr"
 
 
 
-## Step-06: Remove local-exec Provisioners
+## Step-06: Provisioner "local-exec"
 ### Step-06-01: c9-nullresource-provisioners.tf
-- Remove Local Exec Provisioner which is not applicable in CodePipeline -> CodeBuild case. 
+- Applicable in CodePipeline -> CodeBuild case. 
 ```t
-## Local Exec Provisioner:  local-exec provisioner (Creation-Time Provisioner - Triggered during Create Resource)
  provisioner "local-exec" {
     command = "echo VPC created on `date` and VPC ID: ${module.vpc.vpc_id} >> creation-time-vpc-id.txt"
     working_dir = "local-exec-output-files/"
-    #on_failure = continue
   }
 ```
-- Remove the folder `local-exec-output-files`
 ### Step-06-02: c8-elasticip.tf
-- Remove Local Exec Provisioner which is not applicable in CodePipeline -> CodeBuild case. 
+- Applicable in CodePipeline -> CodeBuild case. 
 ```t
-## Local Exec Provisioner:  local-exec provisioner (Destroy-Time Provisioner - Triggered during deletion of Resource)
   provisioner "local-exec" {
     command = "echo Destroy time prov `date` >> destroy-time-prov.txt"
     working_dir = "local-exec-output-files/"
     when = destroy
-    #on_failure = continue
   }  
 ```
 
 ## Step-07: To Support Multiple Environments
 ### Step-07-01: c5-03-securitygroup-bastionsg.tf
 ```t
-# Before
-  name = "public-bastion-sg"  
-# After
+# Append local.name to "public-bastion-sg"  
   name = "${local.name}-public-bastion-sg"
 ```
 ### Step-07-02: c5-04-securitygroup-privatesg.tf
 ```t
-# Before
-  name = "private-sg"
-# After
+# Append local.name to "private-sg"
   name = "${local-name}-private-sg"  
 ```
 
 ### Step-07-03: c5-05-securitygroup-loadbalancersg.tf
 ```t
-# Before
-  name = "loadbalancer-sg"
-# After
+# Append local.name to "loadbalancer-sg"
   name = "${local.name}-loadbalancer-sg"  
 ```
 
@@ -415,10 +404,11 @@ resource "aws_route53_record" "apps_dns" {
 }
 ```
 
-Let's create hosted zone "kalyandemo.com" in Route 53 console
+In my case the domain names change in this step.
+
+I create hosted zone "kalyandemo.com" in Route 53 console
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/9e787e84-dfc5-4b2a-b052-90545789eab7)
-
 
 Let's create dns name record
 
@@ -435,14 +425,8 @@ dns_name = "devdemo5.kalyandemo.com"
 dns_name = "stagedemo5.kalyandemo.com"
 ```
 ### Step-07-05: c11-acm-certificatemanager.tf
-- In your case, the domain names will change as per this step.
-```t
-# Before
-  subject_alternative_names = [
-    "*.kalyandemo.com"
-  ]
 
-# After
+```t
   subject_alternative_names = [
     #"*.kalyandemo.com"
     var.dns_name  
@@ -451,42 +435,27 @@ dns_name = "stagedemo5.kalyandemo.com"
 
 ### Step-07-06: c13-02-autoscaling-launchtemplate-resource.tf
 ```t
-# Before
-  name = "my-launch-template"
-# After
+# Append local.name to name_prefix
   name_prefix = "${local.name}-"
 ```
 ### Step-07-07: c13-02-autoscaling-launchtemplate-resource.tf
 ```t
-# Before
+# Append Name = local.name
   tag_specifications {
     resource_type = "instance"
     tags = {
-      Name = "myasg"
-    }
-  }  
-# After
-  tag_specifications {
-    resource_type = "instance"
-    tags = {
-      #Name = "myasg"
       Name = local.name
     }
   }    
 ```
 ### Step-07-08: c13-03-autoscaling-resource.tf
 ```t
-# Before
-  name_prefix = "myasg-"
-# After
+# Append local.name to name_prefix
   name_prefix = "${local.name}-"  
 ```
 ### Step-07-09: c13-06-autoscaling-ttsp.tf
 ```t
-# Before
-  name = "avg-cpu-policy-greater-than-xx"
-  name = "alb-target-requests-greater-than-yy"
-# After
+# Append local.name to name
   name = "${local.name}-avg-cpu-policy-greater-than-xx"
   name = "${local.name}-alb-target-requests-greater-than-yy"  
 ```
@@ -627,7 +596,7 @@ phases:
   ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/cc2031d5-194e-43da-ae4c-891b9e5a6de4)
 
 
-Create demo-repo 
+I create demo-repos folder in my local
 
 ### Step-11-02: Clone Remote Repo and Copy all related files 
 
@@ -635,10 +604,10 @@ Create demo-repo
 
 ```t
 # Change Directory
-cd demo-repo
+cd demo-repos
 
 # Execute Git Clone
-git clone https://github.com/stacksimplify/terraform-iacdevops-with-aws-codepipeline.git
+git clone https://github.com/felix.dagnon/terraform-iacdevops-with-aws-codepipeline.git
 
 # Copy all files from Section-22 Git-Repo-Files folder
 1. Source Folder Path: 22-IaC-DevOps-using-AWS-CodePipeline/Git-Repo-Files
