@@ -98,7 +98,7 @@ It'll create the Auto Scaling groups with launch templates.
 
 It will create the NAT gateway for VPC and then outbound communication.
 
-It will create related IAM roles, then it will create the Batch in instances,
+It will create related IAM roles, then it will create the instances,
 
 and then it will also create the Simple Notification Service for Auto Scaling group alerts.
 
