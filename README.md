@@ -2,7 +2,7 @@
 
 As far as code functionality, my piece handles the following requirements:
 
-- Provision Permission Sets  WITH Access keys into the AWS Account that hosts the AWS IAM service;
+- Provision Permission Sets with Access keys into the AWS Account that hosts the AWS IAM service;
 
 - Link these Permission Sets to Groups and AWS Accounts;
 
