@@ -481,7 +481,6 @@ dns_name = "stagedemo5.kalyandemo.com"
  
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/a85ae67c-48d4-4331-b83a-5a1be23524c9)
 
-
 ## Step-09: buildspec-dev.yml
 - Discuss about following Environment variables we are going to pass
 - TERRAFORM_VERSION
@@ -607,16 +606,10 @@ I create demo-repos folder in my local
 cd demo-repos
 
 # Execute Git Clone
-git clone https://github.com/felix.dagnon/terraform-iacdevops-with-aws-codepipeline.git
-
-# Copy all files from Section-22 Git-Repo-Files folder
-1. Source Folder Path: 22-IaC-DevOps-using-AWS-CodePipeline/Git-Repo-Files
-2. Copy all files from Source Folder to Destination Folder
-3. Destination Folder Path: demo-repos/terraform-iacdevops-with-aws-codepipeline
+git clone https://github.com/felixdagnon/terraform-iacdevops-with-aws-codepipeline.git
 
 # Verify Git Status
 git status
-
 
 # Git Commit
 git commit -am "First Commit"
@@ -637,7 +630,6 @@ https://github.com/stacksimplify/terraform-iacdevops-with-aws-codepipeline.git
 Let's check Github
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/28c4c56f-3e5b-4b97-9f32-113439095509)
-
 
 
 ## Step-12: Verify if AWS Connector for GitHub already installed on your Github
