@@ -266,11 +266,9 @@ More work as we need to manage many environment related configs
 
 - Close to 150 files you need to manage changes.
   
-For critical projects which you want to isolate as above, Terraform also recommends this approach but its all case to case basis on the environment we have built, skill level and 
+For critical projects which you want to isolate as above, Terraform also recommends this approach but its all case to case basis on the
 
-organization level standards.
-
-
+environment we have built, skill level and organization level standards.
 
 ## Step-03-02: Option-2: Create only 1 folder and leverage same C1 to C13 files (approx 30 files) across environments.
 
