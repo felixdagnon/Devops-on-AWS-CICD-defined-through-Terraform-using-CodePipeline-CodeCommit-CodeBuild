@@ -627,7 +627,7 @@ https://github.com/stacksimplify/terraform-iacdevops-with-aws-codepipeline.git
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/21dd41ae-d2a2-4af6-b14e-1a52494bc530)
 
 
-Let's check Github
+Let's check Github. The codes are uploaded on the repository
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/28c4c56f-3e5b-4b97-9f32-113439095509)
 
@@ -639,7 +639,6 @@ Let's check Github
 - **URL:** https://github.com/settings/installations
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/afd29ee8-d36b-43ee-8331-bc9112f99b54)
-
 
 
 ## Step-13: Create Github Connection from AWS Developer Tools
@@ -677,7 +676,6 @@ Let's check Github
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/838b3e46-5aec-4032-999f-9dcb3c54ba10)
 
-
   
 - Go to below url and verify
   
@@ -706,7 +704,6 @@ Let's check Github
 
 - Click **Next**
   
-
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/968017b1-a84f-4a8a-a2b3-dff3be74d2b2)
 
