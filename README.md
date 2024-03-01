@@ -203,8 +203,6 @@ region = "us-east-1"
 dynamodb_table = "iacdevops-stag-tfstate" 
 ```
 
-
-
 ## Step-02-04: Create S3 Bucket related folders for both environments for Terraform State Storage
 
 Go to Services -> S3 -> terraform-on-aws-for-ec2-demo1
@@ -213,13 +211,11 @@ Go to Services -> S3 -> terraform-on-aws-for-ec2-demo1
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/48b36658-2770-44e7-a5d1-08bb0eaa9ccd)
 
-
 - Create Folder iacdevops\dev
 
 - Create Folder iacdevops\stag
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/dcbaee96-96ee-4fb9-9195-cbfc8fb19cd7)
-
 
 ## Step-02-05: Create DynamoDB Tables for Both Environments for Terraform State Locking
 
@@ -278,9 +274,7 @@ Only 30 files to manage across Dev, QA, Staging, Production and DR environments.
 
 - We are going to take this `option-2` and build the pipeline for Dev and Staging environments
   
-
-![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/f365ca05-b8c0-4c4f-9e5d-dc99806b24bb)
-
+![image](https://github.com/felixdagnon/terraform-Iacdevops-using-aws-codepipeline/assets/91665833/3eaeb769-bfbb-4c0a-8d25-275e334b033f)
 
 ## Step-04: Merge vpc.auto.tfvars and ec2instance.auto.tfvars 
 - Merge `vpc.auto.tfvars` and `ec2instance.auto.tfvars` to environment specific `.tfvars` example `dev.tfvars` and `stag.tfvats`
