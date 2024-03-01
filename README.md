@@ -10,13 +10,7 @@ As far as code functionality, my piece handles the following requirements:
 
 - the code translates into infrastructure which will be built by running terraform commands.
 
-- The environment that is being built will be used to vend Accounts in AWS from a Management account that relies
-
-
- We should use this option to implemente pipeline with AWS Access keys to allow user access. 
- 
  Users assume Roles (shaped as Permission Sets) assigned to Groups that they are part of, which, in turn, are assigned to AWS Accounts.
-
 
 Permission Sets dictate the level of access a User has.
 
