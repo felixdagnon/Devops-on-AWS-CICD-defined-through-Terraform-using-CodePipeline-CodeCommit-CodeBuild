@@ -10,7 +10,7 @@ As far as code functionality, my piece handles the following requirements:
 
 - the code translates into infrastructure which will be built by running terraform commands.
 
- Users assume Roles (shaped as Permission Sets) assigned to Groups that they are part of, which, in turn, are assigned to AWS Accounts.
+ Users assume Roles assigned to Groups that they are part of, which, in turn, are assigned to AWS Accounts.
 
 Permission Sets dictate the level of access a User has.
 
