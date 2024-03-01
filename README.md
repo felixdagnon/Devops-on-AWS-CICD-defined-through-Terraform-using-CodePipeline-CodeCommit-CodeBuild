@@ -1,5 +1,7 @@
 # IacDevops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild
 
+##  Introduction
+
 As far as code functionality, my piece handles the following requirements:
 
 - Provision Permission Sets with Access keys into the AWS Account that hosts the AWS IAM service;
@@ -173,25 +175,6 @@ buildpec.stag.yml
 
 
 We will implement all these changes step by step.
-
-## Step-00: Introduction
-
-1- Terraform Backend with backend-config
-
-2- How to create multiple environments related Pipeline with single TF Config files in Terraform ?
-
-3- As part of Multiple environments we are going to create dev and stag environments
-
-4- We are going build IaC DevOps Pipelines using
-
-  - AWS CodeBuild
-
-  - AWS CodePipeline
-
-  - Github
-
-5- We are going to streamline the terraform-manifests to support multiple environments. 
-
 
 ## Step-01: Copy terraform-manifests from Section-15
 - Copy `terraform-manifests` from Section-15 `15-Autoscaling-with-Launch-Templates`
