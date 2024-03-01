@@ -155,11 +155,13 @@ We are going to make many changes to all these TF configs files to support the m
 
 For that we are going to change the naming convention of all of our resources which will have the local.name appended for them.
 
-so that that resource you can easily identify this belongs to this business division, hyphen, environment name, hyphen, and resource name (BusinessDivision-EnvironmentName-ResourceName).
+so that that resource you can easily identify this belongs to this business division, hyphen, environment name, hyphen, and resource 
 
-We are also going to create a buildspecdev.yml and then buildspecstaging.yml related to dev and staging build specification files to implement CodePipeline.
+name (BusinessDivision-EnvironmentName-ResourceName).
 
-Build specification files will be use for Dev and Staging CodePipeline
+We are also going to create Build specification files.Buildspecdev.yml and buildspecstaging.yml related to dev and staging build 
+
+specification files to implement CodePipeline.
 
 buildpec.dev.yml
 
@@ -170,7 +172,7 @@ buildpec.stag.yml
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/c1dd9956-d6b5-40b3-8656-4610213d8693)
 
 
-We will implement all these changes step by step
+We will implement all these changes step by step.
 
 ## Step-00: Introduction
 
