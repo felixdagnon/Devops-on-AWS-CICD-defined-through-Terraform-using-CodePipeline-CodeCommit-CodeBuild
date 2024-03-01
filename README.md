@@ -8,11 +8,13 @@ As far as code functionality, my piece handles the following requirements:
 
 - Link these Permission Sets to Groups and AWS Accounts;
 
-- CI/CD to deploy the Permission Sets automatically when a new set or Group/Account link is configured and pushed to the code repository;
+- CI/CD to deploy the Permission Sets automatically when a new set or Group/Account link is configured and pushed
+
+to the code repository;
 
 - the code translates into infrastructure which will be built by running terraform commands.
 
- Users assume Roles assigned to Groups that they are part of, which, in turn, are assigned to AWS Accounts.
+Users assume Roles assigned to Groups that they are part of, which, in turn, are assigned to AWS Accounts.
 
 Permission Sets dictate the level of access a User has.
 
