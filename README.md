@@ -155,7 +155,7 @@ We are going to make many changes to all these TF configs files to support the m
 
 For that we are going to change the naming convention of all of our resources which will have the local.name appended for them.
 
-so that that resource you can easily identify this belongs to this business division, hyphen, environment name, hyphen, and resource name.
+so that that resource you can easily identify this belongs to this business division, hyphen, environment name, hyphen, and resource name (BusinessDivision-EnvironmentName-ResourceName).
 
 We are also going to create a buildspecdev.yml and then buildspecstaging.yml related to dev and staging build specification files to implement CodePipeline.
 
