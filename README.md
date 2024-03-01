@@ -48,7 +48,7 @@ We are going to focus on IaC DevOps with AWS CodePipeline to implemente VPC with
 
 Bastion host and Security groups, Application Load Balancer, and also Auto Scaling with Launch Templates.
 
-All these resources will be implement with Terraform using TF Config files will for all the infrastructure supposed to build.
+All these resources will be implement with Terraform using TF Config files for all the infrastructure supposed to build.
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/67009b84-8a6a-405d-8266-235d2cc26e3b)
 
