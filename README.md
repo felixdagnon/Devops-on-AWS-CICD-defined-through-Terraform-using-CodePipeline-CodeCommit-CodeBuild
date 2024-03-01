@@ -33,7 +33,7 @@ Let focus on CI/CD components from the diagram above.
 
 shape of a usable artifact;
 
-- AWS CodePipeline is the CI/CD framework that links the other two services together (as well as others) through executable Stages;
+- AWS CodePipeline is the CI/CD framework that links the other two services together (as well as others) through executable stages;
 
 - AWS S3 to keep any artifacts that result out of a successful Build Stage, for later use and posterity.
 
