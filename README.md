@@ -1,6 +1,4 @@
-# Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild
-Devops on AWS CI/CD defined through Terraform using CodePipeline, CodeCommit CodeBuild
-
+# IacDevops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild
 
 As far as code functionality, my piece handles the following requirements:
 
