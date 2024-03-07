@@ -31,9 +31,9 @@ Let focus on CI/CD components from the diagram above.
 
 - AWS CodeCommit acts as a git server, providing repositories to store code and allows interaction with your code through the git cli;
 
-- AWS CodeBuild acts as a Build environment/engine and is used to execute instructions in multiple stages, to build and pack code in the
+- AWS CodeBuild acts as a Build environment/engine and is used to execute instructions in multiple stages,
 
-shape of a usable artifact;
+to build and pack code in the shape of a usable artifact;
 
 - AWS CodePipeline is the CI/CD framework that links the other two services together (as well as others) through executable stages;
 
