@@ -1013,12 +1013,12 @@ Target groups are Healthy because the instance running in availabities zones are
 
 ```t
 # Access and Test
-http://devdemo5.kalyandemo.com
-http://devdemo5.kalyandemo.com/app1/index.html
-http://devdemo5.kalyandemo.com/app1/metadata.html
+https://devdemo5.kalyandemo.com
+https://devdemo5.kalyandemo.com/app1/index.html
+https://devdemo5.kalyandemo.com/app1/metadata.html
 ```
 
-### Access and Test "http://devdemo5.kalyandemo.com"
+### Access and Test "https://devdemo5.kalyandemo.com"
 
 Let's first verify Route 53. The record name "devdemo5.kalyandemo.com" created
 
@@ -1037,13 +1037,13 @@ Click on to view the certificate complete information
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/50e7a6c5-eb19-4850-aeb2-6448a7339f2c)
 
 
-### Access and Test "http://devdemo5.kalyandemo.com/app1/index.html"
+### Access and Test "https://devdemo5.kalyandemo.com/app1/index.html"
 
 The test is valid
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/dbd1567e-f953-4c69-8085-1da61e61c9da)
 
-### Access and Test "http://devdemo5.kalyandemo.com/app1/metadata.html"
+### Access and Test "https://devdemo5.kalyandemo.com/app1/metadata.html"
 
 Matadata informations are completed. Two instances related private ip are refreshed. The load balancer is working
 
@@ -1340,12 +1340,12 @@ Target groups are Healthy because the instance running in availabities zones are
 
 ```t
 # Access and Test
-http://stagedemo5.kalyandemo.com
-http://stagedemo5.kalyandemo.com/app1/index.html
-http://stagedemo5.kalyandemo.com/app1/metadata.html
+https://stagedemo5.kalyandemo.com
+https://stagedemo5.kalyandemo.com/app1/index.html
+https://stagedemo5.kalyandemo.com/app1/metadata.html
 ```
 
-### Access and Test "http://stagedemo5.kalyandemo.com"
+### Access and Test "https://stagedemo5.kalyandemo.com"
 
 Let's first verify Route 53. The record name "stagdemo5.kalyandemo.com" created
 
@@ -1363,13 +1363,13 @@ Click on to view the certificate complete information
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/71a7750a-4594-43d3-95e3-ef4d83788fc7)
 
-### Access and Test "http://stagedemo5.kalyandemo.com/app1/index.html"
+### Access and Test "https://stagedemo5.kalyandemo.com/app1/index.html"
 
 The test is valid
 
 ![image](https://github.com/felixdagnon/Devops-on-AWS-CICD-defined-through-Terraform-using-CodePipeline-CodeCommit-CodeBuild/assets/91665833/d3e96ef3-1e34-4db0-a9ec-e9bdb4ca534b)
 
-### Access and Test "http://stagedemo5.kalyandemo.com/app1/metadata.html"
+### Access and Test "https://stagedemo5.kalyandemo.com/app1/metadata.html"
 
 Matadata informations are completed. Two instances related private ip are refreshed. The load balancer is working
 
